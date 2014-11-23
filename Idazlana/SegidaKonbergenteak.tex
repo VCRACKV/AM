@@ -1,0 +1,299 @@
+\begin{document}
+
+
+\begin{titlepage}
+
+\begin{center}
+\vspace*{-1in}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=8cm]{./figuras/logo}
+\end{center}
+\end{figure}
+
+
+ANALISI MATEMATIKOA\\
+\vspace*{1.15in}
+\begin{Huge}
+\textbf{SEGIDAK. SEGIDA KONBERGENTEA}\\
+\end{Huge}
+\vspace*{0.6in}
+\begin{large}
+2014-2015 IKASTURTEA\\
+\vspace*{0.15in}
+(EUSKERA TALDEA)\\
+\end{large}
+\vspace*{1.2in}
+\begin{Large}
+\textbf{Informatika Ingeniaritzako Gradua} \\
+\end{Large}
+\begin{Large}
+\textbf{Informatika Fakultatea} \\
+\end{Large}
+\begin{Large}
+\textbf{Donostia} \\
+\end{Large}
+\vspace*{2.3in}
+\vspace*{0.3in}
+\rule{80mm}{0.1mm}\\
+\vspace*{0.1in}
+\begin{large}
+Ander Lopez \\
+\end{large}
+\end{center}
+
+\end{titlepage}
+
+
+\section{Segida Konbergentea}
+
+\begin{propietate}
+\item
+
+$\{a_{n} \}$ segida konbergentea bada, limite bakarra du.\\
+
+\underline{\bold{Froga:}}\\
+
+Demagun ${l_{1}}$ eta ${l_{2}}$ direla  ${a_{n} }$ segidaren bi limite desberdin, ${l_{1}}\neq {l_{2}}$ beraz, $\mid{l_{1}}-{l_{2}}\mid> 0$ da.
+
+Har dezagun $\varepsilon_{0}=\dfrac{\mid l_{1}- l_{2}\mid}{3}$ erradioa.
+\vspace*{0.01in}
+\begin{figure}[hbtp]
+\caption{}
+\centering
+\includegraphics[scale=1]{../../../Desktop/2grafikoa.jpg}
+\end{figure}
+
+\vspace*{0.01in}
+Osa ditzagun $\varepsilon((l_{1},\varepsilon_{0})$ eta $\varepsilon ({l_{2}},\varepsilon_{0})$ inguruneak. Ingurune horiek disjuntuak dira, hau da, $\varepsilon (${l_{1}}$,\varepsilon_{0})\cap \varepsilon (${l_{2}}$, \varepsilon_{0})=\emptyset$\\
+
+-${l_{1}}$ bada ${a_{n} }$ segidaren limitea, $\varepsilon_{0}>0$ emanik, $\exists $n$ (\varepsilon_{0}) \in \NN \ / \ \forall n\geqslant n(\varepsilon_{0})$ \hspace{0.25cm} ${a_{n} }\in \varepsilon (l_{1},\varepsilon_{0})$\\
+
+-${l_{2}}$ bada ${a_{n} }$ segidaren limitea, $\varepsilon_{0}>0$\ emanik,\\
+
+$\exists $n_{2}$(\varepsilon_{0}) \in \NN\ / \ \forall n\geqslant n_{2}(\varepsilon_{0})$\hspace{2cm} $a_{n}   \in \varepsilon (l_{2},\varepsilon_{0})$\\
+ 
+Hortik, $n_{0} (\varepsilon_{0})=max\ \lbrace n_{1}(\varepsilon_{0}), n_{2}(\varepsilon_{0})\rbrace$ \ bada, $\forall n\geqslant n_{0}(\varepsilon_{0})$\\
+ ${a_{n} }\in \varepsilon(${l_{1}}$, \varepsilon_{0})\cap \varepsilon(${l_{2}}$, \varepsilon_{0})$\ ateratzen\ dugu.\\
+
+\\Hori ezinezkoa da inguruneak disjuntuak direlako. Ondorioz, bi limiteak ezin dira ezberdinak izan.\\
+\begin{figure}[hbtp]
+\caption{}
+\centering
+\includegraphics[scale=1]{../../../Desktop/3grafikoa.jpg}
+\end{figure}
+
+
+\end{propietate}
+\vspace*{0.30in}
+\begin{propietate}
+\item
+$\{a_{n} \}$ segida konbergetea bada, bere  azpisegida guztiak konbergenteak dira eta limite bera dute.\\
+\end{propietate}
+
+\begin{propietate}
+\item
+${a_{n} }$ segida konbergentea bada, segida bornatua da.\\ 
+
+\underline{\bold{Froga:}} Demagun $l$ dela ${a_{n} }$ segidaren limitea\\
+
+$\forall \varepsilon > 0 \hspace{0.75cm}\exists n_{0}(\varepsilon)\in \NN \ / \forall n\geqslant n_{0}(\varepsilon)$\hspace{0.75cm}\underline{${a_{n} } \in \varepsilon(l,\varepsilon)$}\  edo  \underline{${a_{n} }\in(l-\varepsilon, l+\varepsilon)$}\\
+
+\vspace*{0.10in}
+
+\centering{edo \ \underline{$(l-\varepsilon)< \ {a_{n} } \ <(l+\varepsilon)$}}
+
+\vspace*{0.15in}
+
+Horrek esan nahi du segidaren $\lbrace {a_{n}_{0}}, {a_{n}_{0+1}},... \rbrace$ azpimultzoa bornaturik dagoela. Bestalde, $\lbrace {a_{1} },{a_{2} },...,{a_{n}_{0-1}} \rbrace$ azpimultzoa finitua da, beraz bornatua da.
+Ondorioz, $\lbrace{a_{n} }\rbrace$ segida bi azpimultzo bornatuan banatu dugu, hau da,$\lbrace{a_{n} }\rbrace$ segida ere bornatua da.\
+\end{propietate}
+
+\begin{propietate}
+\item
+$\lbrace{a_{n} }\rbrace$ segida konbergentearen limitea ez bada zero, segidaren gai batetik aurrera segidaren gai guztiak limitearen zeinua dute.\\
+\end{propietate}
+\begin{propietate}
+\item
+$\lbrace{a_{n} }\rbrace&$ eta $\lbrace{b_{n} }\rbrace$ segida limite $l$ bada eta $\forall n\geqslant n_{0}$ \ ${a_{n} }\leqslant{C_{n} }\leqslant{b_{n} }$ bada,$\lbrace{C_{n} }\rbrace$ segida ere konbergentea da eta bere limitea $l$ da.\\
+\end{propietate}
+\begin{adibide}
+\item
+$\lbrace sin n \rceil$ aztertuko dugu:\
+
+$\lbrace {D_{n}} \rbrace$ = $\lbrace sin n \ / \ sin n>\dfrac{1}{2}\rbrace$ = $\lbrace 1, sin 2, sin 7,...\rbrace$ konbergentea balitz, $\dfrac{1}{2} < l_{1} <$ 1 litzateke.\\
+$\lbrace {E_{n}} \rbrace$ = $\lbrace sin n \ / \ sin n<\dfrac{-1}{2}\rbrace$ = $\lbrace 4, sin 5, sin 10,...\rbrace$ konbergentea balitz, $\dfrac{-1}{2} > l_{2} >$ -1 litzateke.\\
+Hortaz, ${l_{1}}$\neq${l_{2}}$ lirateke. Ondorioz $\lbrace sin n \rbrace$ ezin da konbergentea izan.\\
+Dibergentea izateko $\forall k>0$ \hspace{0.3cm} $\exists n_{0}(k)\in \NN \ / \ \forall n> n_{0}(k)$ \hspace{1cm} ${a_{n} }\in \ ext (\varepsilon(0,k)) \mid{a_{n}}\mid >k$\
+
+\begin{figure}[hbtp]
+\caption{}
+\centering
+\includegraphics[scale=1]{../../../Desktop/4grafiko.jpg}
+\end{figure}
+
+
+baina $\forall n \ sin n \in(-2,2)$, beraz, ezin da dibergentea izan.\\
+
+Ondorioz $\lbrace sin n \rbrace$ oszilatzailea da edo $\not\exists \displaystyle{\lim_{n\to\infty} sin n}$\
+\end{adibide}
+
+\begin{adibide}
+\item
+$a_{n}=\dfrac{n+2}{2n-1}$\\
+
+3, 4/3, 1, 6/7,...\\
+
+Seguida geroz eta txikiagoa da\\
+
+$a_{n}-a_{n+1}>0$\\
+
+$\dfrac{n+2}{2n-1}-\dfrac{(n+1)+2}{2(n+1)-1}>0$\\
+
+$\dfrac{n+2}{2n-1}-\dfrac{n+3}{2n+1}>0$\\
+
+$\dfrac{2n^{2}+n+4n+2-2n^{2}-6n+n+3}{4n^{2}-1}>0$\\
+
+$\dfrac{5}{4n^{2}-1}>0$\\
+
+Monotonoa da:\\
+
+-$a_{1}=3$\\
+
+-$a_{3}=1$\\
+
+-$a_{1000}=0.501....$\\
+
+Beraz limitea 0,5 da. Eta konbergentea dela ere esan genezake:\\
+$$0,5 < a_{n} \leqslant 3$$\\
+\end{adibide}
+
+\begin{adibide}
+\item
+$a_{n+1}= \sqrt[3]{4+(a_{n})^{2}}$   $n \geqslant 2$\\
+$a_{1}$ izanik segida konbergentea alda?\\
+
+$n=1$, $a_{1}=1\leqslant 2$\\
+$a_{n+1}\leqslant 2$ dela konprobatu behar dugu.\\
+
+$(a_{n})^{2} \leqslant 4\Rightarrow 4+(a_{n})^{2}\leqslant 4+4= 8\Rightarrow \sqrt[3]{4+(a_{n})^{2}} \leqslant \sqrt[3]{8} \Rightarrow a_{n+1}= \sqrt[3]{4+(a_{n})^{2}}\leqslant 2$\\
+
+Orain monotonoa dela ikusiko dugu.\\
+
+$a_{n+1}\geqslant a_{n}\Leftrightarrow \sqrt[3]{4+(a_{n})^{2}}\geqslant a_{n} \Leftrightarrow 4+ (a_{n})^{2}\geqslant (a_{n})^{3}\Leftrightarrow (a_{n})^{3}- (a_{n})^{2}-4\leqslant 0\Leftrightarrow (a_{n}-2)((a_{n})^{2}+(a_{n})+2)\leqslant 0$\\
+
+Lehen $0\leqslant a_{n}\leqslant 2$ dela frogatu dugu beraz $a_{n+1}\geqslant a_{n}$ betetzen da.\\
+
+Beraz Segida konbergentea da.\\
+
+\begin{figure}[hbtp]
+\caption{}
+\centering
+\includegraphics[scale=1]{../../../Desktop/5grafriko.jpg}
+\end{figure}
+
+\end{adibide}
+
+\begin{adibide}
+\item
+$\{a_{n} \}_{n=1}^{\infty}$ segida, segida konbergentea alda? Eta bere limitea?\\
+
+Konbergentea izateko monotonoa eta bornatua izan behar du.\\
+
+n ri balioak emanik ikus daiteke monotonoa dela beraz bornatua legoke.\\
+
+Proba dezagun $0< a_{n}\leqslant 1$.\\
+
+$0< a_{n}\leqslant 1$ bada orduan $0<a_{n+1}\leqslant 1$ orduan suposatuz $0< a_{n}\leqslant 1$ hau ere egia da $$-1\leqslant -a_{n}< 0$$\\
+
+Biei 3a gehituz:\\
+
+$2< 3-a_{n}< 3\Leftrightarrow \dfrac{1}{3}< \dfrac{1}{3-a_{n}}< \dfrac{1}{2}$\\
+
+Orduan, $0< a_{n+1}\leqslant 1$\\
+
+Monotonoa alda?\\
+
+$a_{n+1}\leqslant a_{n}$:\\
+
+$\dfrac{1}{3-a_{n}}\leqslant a_{n}\Leftrightarrow 1\leqslant (3-a_{n})a_{n}\Leftrightarrow (a_{n})^{2}-3a_{n}+1\leqslant 0$\\
+
+Beraz bai betetzen da eta beraz konbergentea da.\\
+
+Limitea kalkulatuko dugu orain.\\
+L deituko diogu $a_{n}$ segidari:\\
+
+$\displaystyle{\lim_{n\to\infty}a_{n}= \displaystyle{\lim_{n\to\infty}{\dfrac{1}{3-a_{n-1}}}={\dfrac{1}{3-\displaystyle{\lim_{n\to\infty}{a_{n-1}}}}}$\\
+
+L-k hau bete behar du:\\
+
+$L=\frac{1}{3-L}\Leftrightarrow L(3-L)=1$\\
+
+$x(3-x)=1\Leftrightarrow x^{2}-3x+1=0$\\
+
+$x=\dfrac{3\pm\sqrt{9-4}}{2}=\dfrac{3\pm\sqrt{5}}{2}$\\
+Beraz $L=\dfrac{3-\sqrt{5}}{2}< 1$\\
+
+\begin{figure}[hbtp]
+\caption{}
+\centering
+\includegraphics[scale=1]{../../../Desktop/6grafikoa.jpg}
+\end{figure}
+
+\end{adibide}
+\vspace*{0.60in}
+\subsection{Segida Monotonoa}
+\begin{definizio}
+\item
+${a_{n}} \subset \RR$ segida emanik,
+\begin{itemize}
+\item
+${a_{n}}$ monotono gorakorra da $\forall n \geqslant {n_{0}}$ \hspace{0.3cm} ${a_{n}} \leqslant {a_{n+1}}$ betetzen bada.
+\item
+${a_{n}}$ hertsiki monotono gorakorra da $\forall n \geqslant {n_{0}}$ \hspace{0.3cm} ${a_{n}}<{a_{n+1}}$ betetzen bada.
+\item
+${a_{n}}$ monotono beherakorra da $\forall n \geqslant {n_{0}}$ \hspace{0.3cm} ${a_{n+1}} \leqslant {a_{n}}$ betetzen bada.
+\item
+${a_{n}}$ hertsiki monotono beherakorra da $\forall n \geqslant {n_{0}}$ \hspace{0.3cm} ${a_{n+1}}<{a_{n}}$ betetzen bada.
+\end{itemize}
+\end{definizio}
+\begin{adibide}
+\item
+\begin{itemize}
+\item
+$\lbrace 1 \rbrace$ segida monotono gorakorra eta beherakorra da.
+\item
+$\lbrace \dfrac{n^{2}-1}{n^{2}} \rbrace$ segida hertsiki monotono gorakorra da.
+\item
+$\lbrace \dfrac{n^{2}+1}{n^{2}} \rbrace$ segida hertsiki monotono beherakorra da.
+\end{itemize}
+\end{adibide}
+\begin{teorema}
+\item
+Segida monotono bornatuak konbergenteak dira.
+\end{teorema}
+\begin{adibide}
+\item
+$\lbrace (1+\dfrac{1}{n})^{n} \rbrace \rightarrow e$\\
+
+Froga daiteke edozein $n$ hartuta dagoela $2\leqslant(1+\dfrac{1}{n})^{n}<3$, hau da, bornatua dela. Segida hertsiki monotono gorakorra da.
+\end{adibide}
+
+\begin{adibide}
+\item
+
+$a_{n}=\dfrac{2n-1}{n}$ segida monotonoa alda?\\
+
+Ikus dezagun hau betetzen duen:\\
+
+$a_{n+1}-a_{n} > 0   \forall n\in \NN$\\
+
+$a_{n+1}-a_{n}=\dfrac{2(n+1)-1}{n+1}-\dfrac{2n-1}{n}=$\\
+
+$=\dfrac{2n+1}{n+1}-\dfrac{2n-1}{n}=\dfrac{(2n+1)*n-(n+1)(2n-1)}{(n+1)*1}=$\\
+
+$=\dfrac{n^{2}-n^{2}+1}{(n+1)*n}=\dfrac{1}{(n+1)*n} > 0$\\
+
+Bai, beraz monotonoa da.
+\end{adibide}
+\end{document}

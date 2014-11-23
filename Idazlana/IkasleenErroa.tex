@@ -1,0 +1,163 @@
+\documentclass[12pt]{article}
+
+
+\usepackage{amsmath, amssymb, latexsym}
+\usepackage{epsf, graphics, graphicx}
+\usepackage{fancyhdr}
+\usepackage[latin1]{inputenc}
+\usepackage{fontenc}
+\usepackage{psfrag}
+\usepackage{theorem}
+\usepackage[basque]{babel}
+
+
+\topmargin 0cm
+\topskip -1.5cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\textwidth 16cm
+\textheight 23cm
+\footskip -1.5cm
+
+
+\pagestyle{myheadings}
+
+\markright{\textbf{Analisi Matematikoa} \hfill Segida Konbergenteak-}
+%\markright{\textbf{Kalkulua} \hfill Segida Konbergentea-}
+
+\newcommand{\NN}{\mathbb N}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\II}{\mathbb I}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+
+
+\newcommand{\kala}{\mathcal A}
+\newcommand{\kalb}{\mathcal B}
+\newcommand{\kalc}{\mathcal C}
+\newcommand{\ff}{\mathbb F}
+\newcommand{\kalf}{\mathcal F}
+\newcommand{\kalg}{\mathcal G}
+\newcommand{\kk}{\mathbb K}
+\newcommand{\kall}{\mathcal L}
+\newcommand{\kalm}{\mathcal M}
+\newcommand{\kalp}{\mathcal P}
+\newcommand{\kalr}{\mathcal R}
+\newcommand{\rel}{\mathcal R}
+\newcommand{\kals}{\mathcal S}
+\newcommand{\kalt}{\mathcal T}
+\newcommand{\kalv}{\mathcal V}
+
+
+\newcommand{\aalj}{\mbox{{\rm anizalj }}}
+\newcommand{\ageo}{\mbox{{\rm anizgeo }}}
+\newcommand{\antz}{\ensuremath{\stackrel{a}{\sim}}}
+\newcommand{\Ao}{\stackrel{\circ}{A}}
+\newcommand{\arccot}{\mbox{{\rm arccot }}}
+\newcommand{\Arg}{\mbox{{\rm Arg}}}
+\newcommand{\bek}[1]{\mbox{\textbf{\textit{#1}}}}
+\newcommand{\bin}[2]{\left( \begin{array}{@{}c@{}}
+			          #1 \\ #2
+			    \end{array} \right) }
+\newcommand{\Bo}{\stackrel{\circ}{B}}
+\newcommand{\Eo}{\stackrel{\circ}{E}}
+\newcommand{\epsi}{\ensuremath{\varepsilon}}
+\newcommand{\err}{\ensuremath{\stackrel{err}{\sim}}}
+\newcommand{\ext}{\mbox{{\rm ext}}}
+\newcommand{\gl}{\mbox{{\rm GL}}}
+\newcommand{\im}{\mbox{{\rm Im }}}
+\newcommand{\ind}{\mbox{{\rm ind }}}
+\newcommand{\ir}{\mbox{{\rm Im }}}
+\newcommand{\kar}{\mbox{{\rm card }}}
+\newcommand{\Log}{\mbox{{\rm Log }}}
+\newcommand{\mkt}{\mbox{{\rm mkt }}}
+\newcommand{\NNo}{\stackrel{\circ}{\NN}}
+\newcommand{\norma}[1]{\parallel #1 \parallel}
+\newcommand{\nukleo}{\mbox{{\rm Ker }}}
+\newcommand{\rang}{\mbox{{\rm rang }}}
+\newcommand{\re}{\mbox{{\rm Re }}}
+\newcommand{\sig}{\mbox{{\rm sig}}}
+\newcommand{\zkh}{\mbox{{\rm zkh }}}
+\newcommand{\zut}{\ensuremath{\stackrel{zut}{\sim}}}
+
+
+\newcommand{\froga}{\noindent{\bf Froga. }}
+\newcommand{\hitzarmen}{\noindent{\bf Hitzarmena. }}
+\newcommand{\idazkera}{\noindent{\bf Idazkera. }}
+\newcommand{\ohar}{\noindent{\bf Oharra. }}
+\newcommand{\oharrak}{\noindent{\bf Oharrak. }}
+
+
+\theoremstyle{change}
+\newtheorem{teorema}{Teorema.}[section]
+
+\newtheorem{adibide}[teorema]{Adibidea.}
+\newtheorem{adibideak}[teorema]{Adibideak.}
+
+\newtheorem{aieru}[teorema]{Aierua.}
+
+\newtheorem{definizio}[teorema]{Definizioa.}
+
+\newtheorem{korolario}[teorema]{Korolarioa.}
+
+\newtheorem{lema}[teorema]{Lema.}
+
+\newtheorem{ondorio}[teorema]{Ondorioa.}
+\newtheorem{ondorioak}[teorema]{Ondorioak.}
+
+\newtheorem{printzipio}[teorema]{Printzipioa.}
+
+\newtheorem{problema}[teorema]{Problema.}
+
+\newtheorem{propietate}[teorema]{Propietatea.}
+\newtheorem{propietateak}[teorema]{Propietateak.}
+
+\newtheorem{proposizio}[teorema]{Proposizioa.}
+
+
+\newenvironment{adi}{\begin{adibide} \em } {\end{adibide}}
+
+\newenvironment{adiitem}{\begin{adibideak} \em 
+                           \begin{description} \item \end{description}}
+                          {\end{adibideak}}
+
+\newenvironment{ondoitem}{\begin{ondorioak} \em 
+                         \begin{description} \item \end{description}}
+                         {\end{ondorioak}}
+
+\newenvironment{propiitem}{\begin{propietateak} \em 
+                           \begin{description} \item \end{description}}
+                          {\end{propietateak}}
+
+
+\begin{document}
+
+\bigskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ANALISI MATEMATIKOA
+%
+%
+%
+\input{SegidaKonbergenteak}
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ANALISI MATEMATIKOA
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% KALKULUA
+%
+%
+%
+%\input{praktikak/muturrak}
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% KALKULUA
+
+
+
+\end{document}

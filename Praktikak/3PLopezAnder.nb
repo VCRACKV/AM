@@ -1,0 +1,3234 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[    113163,       3225]
+NotebookOptionsPosition[    105038,       2957]
+NotebookOutlinePosition[    105490,       2974]
+CellTagsIndexPosition[    105447,       2971]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Zenbaki errealen serieak eta \[Pi] zenbakia\
+\>", "Section",
+ CellChangeTimes->{{3.569556728319195*^9, 3.569556738182445*^9}, {
+   3.572585885355321*^9, 3.5725858883534737`*^9}, {3.572586573682199*^9, 
+   3.572586656921543*^9}, {3.572591573644515*^9, 3.5725915900414667`*^9}, {
+   3.582363889249454*^9, 3.58236394537873*^9}, {3.5824422224397497`*^9, 
+   3.5824422449866247`*^9}, 3.5824444139084997`*^9, {3.586585376796875*^9, 
+   3.586585379671875*^9}, {3.593514658426681*^9, 3.593514674286069*^9}, {
+   3.593514746611561*^9, 3.593514759330881*^9}, {3.5935833079157467`*^9, 
+   3.59358331495953*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Zirkuluaren koadraturaren problema", "Subsection",
+ CellChangeTimes->{{3.593516859344582*^9, 3.593516866471994*^9}}],
+
+Cell[TextData[StyleBox["Bila ezazu sarean zer den zirkuluaren koadratura.",
+ FontWeight->"Bold",
+ FontSlant->"Italic",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellChangeTimes->{{3.572637996749448*^9, 3.572638054408152*^9}, {
+   3.5726436437857227`*^9, 3.572643665288311*^9}, {3.5726457009041452`*^9, 
+   3.572645721999963*^9}, {3.572672635671875*^9, 3.57267267890625*^9}, {
+   3.57270620709375*^9, 3.572706315046875*^9}, {3.57270635296875*^9, 
+   3.57270636865625*^9}, {3.575703280319875*^9, 3.575703281069875*^9}, {
+   3.582368336930883*^9, 3.582368405343787*^9}, {3.5824429552366247`*^9, 
+   3.5824429555491247`*^9}, {3.5825158431116247`*^9, 
+   3.5825158622834997`*^9}, {3.593516407714341*^9, 3.59351642138413*^9}, {
+   3.593518081166884*^9, 3.593518087397499*^9}, {3.593519008742532*^9, 
+   3.59351900926827*^9}, 3.593754179671875*^9, 3.59375465853125*^9, 
+   3.5941320905942497`*^9, {3.5951438292720003`*^9, 3.5951438299126253`*^9}},
+ TextJustification->1.],
+
+Cell["\<\
+XIX. mendean, Ferdinand Lindemann matematikari alemaniarrak frogatu zuen \
+\[Pi] zenbakia transzendentea dela, eta beraz, greziarren zirkuluaren \
+koadraturaren problema ebatzi ezina dela.\
+\>", "Text",
+ CellChangeTimes->{{3.5935169619031067`*^9, 3.593517029242702*^9}, {
+   3.593517356662814*^9, 3.593517357079158*^9}, {3.593518185868004*^9, 
+   3.593518189025297*^9}, {3.59375418190625*^9, 3.593754183421875*^9}, 
+   3.593754232890625*^9, {3.5938368154375*^9, 3.593836822484375*^9}, {
+   3.59384086846875*^9, 3.5938408736875*^9}},
+ TextJustification->1.]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Hurbilpen metodoak: \[Pi] zenbakiaren hurbilpenak\
+\>", "Subsection",
+ CellChangeTimes->{{3.59351668539266*^9, 3.593516785571225*^9}, {
+   3.5935168233066587`*^9, 3.5935168254896183`*^9}, 3.593583408075406*^9, {
+   3.5935834417201843`*^9, 3.5935834797481833`*^9}, 3.59383683225*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Zirkuluaren koadratura hurbildua: Arkimedes-en metodoa", "Subsubsection",
+ CellChangeTimes->{{3.5935833774699583`*^9, 3.5935834118193398`*^9}, 
+   3.593754263328125*^9}],
+
+Cell[" Arkimedes-en prozedura (K. a. III. mendea)", "Text",
+ CellChangeTimes->{
+  3.59351669097393*^9, {3.5935167898162518`*^9, 3.593516798468268*^9}, {
+   3.593754267671875*^9, 3.593754273546875*^9}, {3.593754483734375*^9, 
+   3.5937544903125*^9}, 3.593836845640625*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ArkimedesenZirkuloa", "[", "100", "]"}]], "Input",
+ CellChangeTimes->{{3.593515619127255*^9, 3.5935156422521563`*^9}, 
+   3.593515677501995*^9, {3.5935157298482847`*^9, 3.593515730937933*^9}, {
+   3.593573469805463*^9, 3.593573470170982*^9}, 3.593573512458716*^9, {
+   3.593573590091283*^9, 3.593573609961083*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 54, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 6, "Alde kopurua"}, 3, 100, 1}}, 
+    Typeset`size$$ = {540., {265., 275.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, $CellContext`n$320$$ = 
+    0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 6}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$320$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics[{Brown, Thin, 
+         Circle[], Thin, 
+         Dashing[1], Blue, 
+         Table[
+          GeometricTransformation[
+           Line[{{0, 0}, {1, 0}}], 
+           
+           RotationMatrix[$CellContext`a]], {$CellContext`a, (
+            2 (Pi/$CellContext`n$$)) Range[$CellContext`n$$]}], 
+         Dashing[0.01], Blue, 
+         Table[
+          GeometricTransformation[
+           Line[{{1, 0}, {
+              Cos[2 (Pi/$CellContext`n$$)], 
+              Sin[2 (Pi/$CellContext`n$$)]}}], 
+           
+           RotationMatrix[$CellContext`a]], {$CellContext`a, (
+            2 (Pi/$CellContext`n$$)) Range[$CellContext`n$$]}], 
+         Dashing[1], Red, 
+         Table[
+          GeometricTransformation[
+           Line[{{1, 
+              Tan[Pi/$CellContext`n$$]}, {1, 
+              Tan[(-Pi)/$CellContext`n$$]}}], 
+           
+           RotationMatrix[$CellContext`a]], {$CellContext`a, (
+            2 (Pi/$CellContext`n$$)) Range[$CellContext`n$$]}], 
+         Dashing[0.01], Red, 
+         Table[
+          GeometricTransformation[
+           Line[{{0, 0}, {
+             Cos[Pi/$CellContext`n$$]/Cos[Pi/$CellContext`n$$], 
+              Sin[Pi/$CellContext`n$$]/Cos[Pi/$CellContext`n$$]}}], 
+           
+           RotationMatrix[$CellContext`a]], {$CellContext`a, (
+            2 (Pi/$CellContext`n$$)) Range[$CellContext`n$$]}]}, PlotRange -> 
+        1.3, Epilog -> Inset[
+          
+          Style[($CellContext`n$$ (1./2)) 
+           Sqrt[(Tan[Pi/N[$CellContext`n$$]] - 
+              Tan[(-Pi)/N[$CellContext`n$$]])^2], 20, Red], {0, 1.2}], Prolog -> 
+        Inset[
+          
+          Style[($CellContext`n$$ Cos[Pi/N[$CellContext`n$$]]) 
+           Sin[Pi/N[$CellContext`n$$]], 20, Blue], {0, -1.2}]], 
+      "Specifications" :> {{{$CellContext`n$$, 6, "Alde kopurua"}, 3, 100, 1, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{612., {333., 342.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.593515210177388*^9, 3.593515262463313*^9, 3.593515301108425*^9, {
+   3.59351536757273*^9, 3.593515405746434*^9}, 3.59351546115268*^9, {
+   3.5935156292924833`*^9, 3.5935156427849092`*^9}, 3.593515678274735*^9, 
+   3.593515731448408*^9, 3.593518129176173*^9, 3.5935734044034643`*^9, {
+   3.593573452082554*^9, 3.593573470792583*^9}, 3.5935735132577143`*^9, {
+   3.593573591692555*^9, 3.593573610594041*^9}, 3.59373978864904*^9, 
+   3.5951551468813753`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Leibniz-en formula", "Subsubsection",
+ CellChangeTimes->{{3.593514732532143*^9, 3.5935147390039663`*^9}}],
+
+Cell[TextData[{
+ "1682 urtean, Leibniz matematikari alemaniarrak berdintza hau frogatu zuen:\n\
+\n\t\t\t\t",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{"\[Pi]", " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"n", "=", "0"}], "\[Infinity]"], 
+      FractionBox[
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"-", "1"}], ")"}], "n"], 
+       RowBox[{
+        RowBox[{"2", "n"}], "+", "1"}]]}], " ", "=", " ", 
+     RowBox[{"4", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"1", "-", 
+          FractionBox["1", "3"], "+", 
+          FractionBox["1", "5"], "-", 
+          FractionBox["1", "7"], "+"}], "..."}], ")"}], "."}]}]}]}],
+   FontFamily->"Courier New"]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center,
+  FontWeight->"Bold"],
+ " \nBaina, guk egokituko dugu",
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["n",
+    FontSlant->"Italic"], "=", "1"}]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center,
+  FontWeight->"Bold"],
+ " baliotik hasteko."
+}], "Text",
+ CellChangeTimes->{{3.593517190650712*^9, 3.593517212772087*^9}, {
+  3.593517324744006*^9, 3.593517376030357*^9}, {3.593517442741788*^9, 
+  3.593517473772294*^9}, {3.5935176071607018`*^9, 3.593517679335423*^9}, {
+  3.593520370015251*^9, 3.5935203702870293`*^9}, {3.593584987739716*^9, 
+  3.59358498773985*^9}, {3.5937545198125*^9, 3.593754542140625*^9}, {
+  3.593836860890625*^9, 3.59383689246875*^9}, {3.593836929265625*^9, 
+  3.5938370578125*^9}, {3.593837088078125*^9, 3.593837228296875*^9}, {
+  3.593840897671875*^9, 3.59384091040625*^9}, {3.5951449717407503`*^9, 
+  3.5951450672251253`*^9}, {3.5951453714126253`*^9, 3.5951453714126253`*^9}, {
+  3.5951454028970003`*^9, 3.5951454028970003`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LeibnizenBatura", "[", "k_Integer", "]"}], ":=", 
+  RowBox[{"4", " ", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], "^", 
+       RowBox[{"(", 
+        RowBox[{"i", "+", "1"}], ")"}]}], "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "i"}], "-", "1"}], ")"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "k"}], "}"}]}], "]"}]}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.593517486454877*^9, 3.593517596163537*^9}, {
+   3.5935177101891403`*^9, 3.5935177300361853`*^9}, {3.593517787474403*^9, 
+   3.593517797752956*^9}, {3.593517853400186*^9, 3.593517854538604*^9}, {
+   3.593519093404253*^9, 3.593519102659485*^9}, 3.5938310331011333`*^9, 
+   3.593831128374243*^9, {3.5951453457720003`*^9, 3.5951453562095003`*^9}}],
+
+Cell["\<\
+Matematikari horren izena daraman irizpidearen arabera, seriea konbergentea \
+da.\
+\>", "Text",
+ CellChangeTimes->{{3.593517841374982*^9, 3.593517860693078*^9}, {
+   3.593517915291629*^9, 3.593517927098977*^9}, 3.593754563640625*^9, {
+   3.593837263796875*^9, 3.59383726390625*^9}}],
+
+Cell["\<\
+Ondoren, serie horren batura partzial bat kalkulatuz, \[Pi] zenbakiaren \
+hurbilpen bat lortuko dugu:\
+\>", "Text",
+ CellChangeTimes->{{3.593518391874915*^9, 3.59351845830437*^9}, {
+  3.593518533149302*^9, 3.593518533653181*^9}, {3.5935187700211277`*^9, 
+  3.593518772460887*^9}, {3.59375549065625*^9, 3.593755492265625*^9}, {
+  3.593837256859375*^9, 3.59383727553125*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LeibnizenBatura", "[", "1000", "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.5935174545034657`*^9, 3.593517455764559*^9}, {
+  3.5935177416607523`*^9, 3.59351774542668*^9}, {3.5935177771931543`*^9, 
+  3.593517807584737*^9}, {3.593519122610371*^9, 3.593519133257636*^9}}],
+
+Cell[BoxData["3.140592653839793`"], "Output",
+ CellChangeTimes->{3.6246959775108137`*^9, 3.625763910766802*^9}]
+}, Open  ]],
+
+Cell[TextData[StyleBox["1) Aurrreikus ezazu nolakoa izango den gehienez \
+hurbilpen horren errorea, serie alternatuetarako teorian ikusitakoa erabiliz \
+(eman itzazu erantzunaren azalpenak).",
+ FontWeight->"Bold",
+ FontSlant->"Italic",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellChangeTimes->{{3.593518548581182*^9, 3.59351855042194*^9}, {
+   3.5935187070565147`*^9, 3.5935187549663897`*^9}, {3.593518785382291*^9, 
+   3.593518819932076*^9}, {3.593519039509178*^9, 3.593519049219851*^9}, {
+   3.593573825995377*^9, 3.5935738408721733`*^9}, 3.593754687953125*^9, {
+   3.59375550578125*^9, 3.593755523765625*^9}, {3.593837319171875*^9, 
+   3.593837364546875*^9}, 3.5941322232973747`*^9, 3.5951442385220003`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"4", "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", "*", "1000"}], "+", "1"}], ")"}]}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.5935174545034657`*^9, 3.593517455764559*^9}, {
+  3.5935177416607523`*^9, 3.59351774542668*^9}, {3.5935177771931543`*^9, 
+  3.593517807584737*^9}, {3.593519122610371*^9, 3.593519133257636*^9}, {
+  3.6246963993589163`*^9, 3.624696431661006*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["0.001999000499750125`"], "Output",
+ CellChangeTimes->{3.6246964327670097`*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[TextData[{
+ "| ",
+ StyleBox["LeibnizenBatura",
+  FontWeight->"Bold"],
+ "[1000] - \[Pi] | \[LessEqual]  a_1000+1 = 0.001999"
+}], "Text",
+ CellChangeTimes->{{3.5935737413942757`*^9, 3.59357378262241*^9}, {
+  3.624696464067018*^9, 3.624696509178402*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell["\<\
+Ondoren, kalkula ezazu benetan egindako errorearen balio absolutua, eta \
+egiazta ezazu goian kalkulatutako errorearen bornea zuzena den.\
+\>", "Text",
+ CellChangeTimes->{{3.593518842442629*^9, 3.5935188571136007`*^9}, {
+  3.59351890138449*^9, 3.593518989549603*^9}, {3.593837402*^9, 
+  3.593837424328125*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Abs", "[", 
+   RowBox[{
+    RowBox[{"LeibnizenBatura", "[", "1000", "]"}], "-", "\[Pi]"}], "]"}], "//",
+   "N"}]], "Input",
+ CellChangeTimes->{{3.593518342823245*^9, 3.5935183533890657`*^9}, {
+  3.593518949695694*^9, 3.593518953000548*^9}, {3.5935191414100847`*^9, 
+  3.593519153153122*^9}, {3.593519304683476*^9, 3.593519306779854*^9}, {
+  3.624696611140807*^9, 3.624696624693976*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["0.0009999997500003133`"], "Output",
+ CellChangeTimes->{3.624696614776947*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["2) Zenbat batugai batu beharko ditugu errorearen balio absolutua ",
+  
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  SuperscriptBox["10", 
+   RowBox[{"-", "4"}]]],
+  CellChangeTimes->{3.593519224602846*^9},
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" baino txikiagoa izateko?",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.5935190779872713`*^9, 3.593519078794149*^9}, {
+   3.593519169672155*^9, 3.593519244780569*^9}, {3.593831143009712*^9, 
+   3.593831144361747*^9}, 3.5941322362973747`*^9, 3.5951442467095003`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"4", "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "h"}], "+", "1"}], ")"}]}], "\[Equal]", 
+     RowBox[{"10", "^", 
+      RowBox[{"(", 
+       RowBox[{"-", "4"}], ")"}]}]}], ",", "h"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.624697151648324*^9, 3.624697199484926*^9}, {
+  3.624697325518742*^9, 3.624697330030455*^9}, {3.624697386463317*^9, 
+  3.62469739593489*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"h", "\[Rule]", "19999.5`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.624697201587206*^9, 3.6246972424006023`*^9, 3.6246973365139713`*^9, {
+   3.624697390130108*^9, 3.624697397522818*^9}},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"h", " ", "=", " ", "20000"}]], "Input",
+ CellChangeTimes->{{3.5935194088861713`*^9, 3.593519411877533*^9}, 
+   3.593840941234375*^9, {3.5941322517504997`*^9, 3.5941322517504997`*^9}, 
+   3.5951454317251253`*^9, {3.5951554071938753`*^9, 3.5951554087720003`*^9}, 
+   3.619504031615*^9, {3.624696901845025*^9, 3.624697011853827*^9}, 
+   3.624697147749618*^9, {3.6246972366929693`*^9, 3.6246972380290337`*^9}, {
+   3.624697354661131*^9, 3.624697381262932*^9}, 3.62469743161448*^9, {
+   3.6246974650060453`*^9, 3.624697465981482*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["20000"], "Output",
+ CellChangeTimes->{3.624697433932447*^9, 3.6246974671597652`*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[TextData[StyleBox["3) Batura partzial hori kalkulatu, eta egiaztatu \
+lortu duzun \[Pi] zenbakiaren hurbilpenaren doitasuna eskatutakoa den.",
+ FontWeight->"Bold",
+ FontSlant->"Italic",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellChangeTimes->{{3.593519278963237*^9, 3.593519396206719*^9}, 
+   3.59375551271875*^9, 3.5951442578032503`*^9},
+ TextJustification->1.],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LeibnizenBatura", "[", "h", "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.6246975326216288`*^9, 3.624697541413204*^9}, {
+  3.62469760903004*^9, 3.624697610229686*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["3.1415426535898243`"], "Output",
+ CellChangeTimes->{3.624697542937394*^9, 3.624697611359541*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Abs", "[", 
+   RowBox[{
+    RowBox[{"LeibnizenBatura", "[", "h", "]"}], "-", "\[Pi]"}], "]"}], "//", 
+  "N"}]], "Input",
+ CellChangeTimes->{{3.593519222489427*^9, 3.593519224254197*^9}, {
+   3.593519422410379*^9, 3.593519427758902*^9}, 3.5951454462876253`*^9, {
+   3.6246975665896187`*^9, 3.624697567245585*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["0.000049999999968797226`"], "Output",
+ CellChangeTimes->{3.624697570076033*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"LeibnizenBatura", "[", "n", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "200"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+   RowBox[{"PlotLabel", "\[Rule]", 
+    RowBox[{"HoldForm", "[", 
+     RowBox[{"LeibnizenBatura", "[", "n", "]"}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.593846627794155*^9, 3.593846687165232*^9}, {
+   3.593846717333447*^9, 3.593846741469831*^9}, {3.593846818396384*^9, 
+   3.593846848380419*^9}, 3.593846921547835*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   {RGBColor[0.24720000000000017`, 0.24, 0.6], LineBox[CompressedData["
+1:eJw9zQlQkwcaxvFAOYJApYIcgiNYqqIUOQQs58N9hiMQzgRyJ90CHigqsN1Y
+tFsFqgMKCqtDoYKItWhhsWAheK1SgSlg64EUHB3UVYqCB4Kydpv3+yaZzJtf
+/nnsxBu4Mm0Wi3Xl3fvPz7+eSf+/Pk2g+QK8/z+6mpuNcx1/Poag31Vudnj3
+0tfcZihoastvaluguS1RxnaMftpHboPptbWnLEPIbTFgrCp5sZytuZej5Q9R
+zg0dcnucH6rUbuaRr8CHT5ZKr9w20NyrYOxdOlK9jXw1eDbsqYguckdkGDg1
+jO0jd4LFaX9fwQlyZyzc3+FoXUvuAv1N/j6pVeSuUIh51ZHN5G7w3TgrOVNK
+vg42EoegYx3k7rgXVB+bW0TugZb0Kt7kRXJPLFbE/Xs2n3w9yvumtnx/jfwT
+nAv9OH8kl9wL1vUlN30Hyb1xV0ve3ZdN7oPoMfOzwzfIfRHxSGf4gJLcDyYB
+Bg877pD7Y2zlP3P1peRA9zLdhPkxjauAb1YWuekLyQNwSTqYdf4+eQCuRZ6a
+KOCTByLDZ++BJQ/JAyEJOtTMTSUPwovai42Wj8mDsDs6VFGYRB6MVsNnjj0T
+5MHgK+5PPk4gD8HXbQ1GXk/JQzBhwc6uiicPRbq7tvemKfJQiCSbzxXGkoeh
+W2Bps+05eRisOg/blXLIw9F69rcb8S/Jw1ERXPTqUhR5BA7NaB3VmyGPAGt3
+5T+WR5JHgv+s7trh1+SR8Hn59OTRcPIovI68umzhHHkUmmLnjTzDyKOxMGpp
+z6dvyKMxN2B3/EEIOQcvwz8rPfmWnIMUzuknzcHkMfDMy+q9OU8egxMmNnWl
+QeSxUG58dnSKpblVsTDx9Pu1MJA8Dqy1XkOzWpobcTBZ6TdQGEC/j8PeMi39
+aW3NrY6DtEJhXgLq43G47HrNnfeoj0d90ZGYRn/q4xFjOj32ow718eifXMQZ
+9KOeCyM39vgeXeq5eNtuqGtAruJisuzVdzF61HORHLblywhf6hPAy5myMtCn
+PgHuM6tel/tQnwBW6u0XP5KrE1DB6Ts67k19Ini7nOdEbOoTcfmI7eUgclUi
+WHMl/VoG1CfCld8w0OBFPQ8DOpf1qsjBQ+zfOtxNyVU8cBXdDmsWUM/DaofB
+7N2fUJ+E37oWtLSSIwkHOAa6b9dTn4SP/uNq7mVIfRIW5FzfV0jOSsbFn1lt
+Z8mRjD19E00spk+GwOnv0y5G1CfD1CVhfo8n9Snw2X/Lvp4cKeBvz/K0JFel
+4NzWwMrFxtSnYEl3HLvJg/pU5KfvOaAiRyosw6wcA8lVqbj1r97McaZPhfab
+aPEdd+rT0KSr4xn5PvVpaPTgbygkV6WhOn9LQiO5Og1mq9fYLGP6dGy8suqR
+zkLq07E5s9H90jrq02EtiHUUkKvTUZCzpSSHnMVHUnZ52Bmm56O/dtf0Eqbn
+gzP4mVzHhHo+urh3g3vcqBfg/kVRcwI5BFg9Ik4uJFcJEJgaF1nD9AKM5GSx
+XZg+A4UtR5IeMX0GBGe6PB64Up+B/vKc5y4fUJ8Bo99DL3xDzsrEq+Gh4G3k
+yMSDrIf7BUyfCVXnjLCd6TPh+0ayy5rphVh6J0g6S24rxJu5D3fddqH/E0J7
+dofCa5HmFgoxUr1i+xFylRCD2+/u3EZeI4So81aEiFwtRKaO8OoZ8lEhmqt1
+760gZ4lQ0VXMfUxuK0Jed6PrhDPti5Bi1+tsb0r7Itzwn1zeRq4SQdazIS+N
+vEYE9WXTup3kahFYX7St20c+KkJvEaeWQ84SI/CrZwXnyW3FKD54wcSa2Rfj
+v/K96dPMvhg7nmz//eFa2hfDW2Z6196M9sXw+tyP1U6uFiO6K21pIvmoGAmV
+x2TF5CwJnDtzl3xBbiuBmjulnUEOCYZ6Ltw/RS6UoHXW7JoLsy/BmnLj4lvM
+vgRhKQdb9Zh9CRqSChbrLqZ9CUzOl7UMO9G+FPNZx/c5kdtK0TXb2vkDOaQI
+tzzxXjK5UIqtPzj0FJOrpLh32qLgc/IaKWzqynql5Op3NxbNf8vsS1EfwFb7
+MfsymO6MOtTD7MtgNWN82IrZl2FrnlHsH8y+DKW/lsQ9/5j2ZfAv9F5jak77
+MuBE78gv5GoZ9KZF6zzIR2X4+etcn+/JWXIklZ7elEJuK0dif564lBxy3HQ1
+eLSDXCjH+o9sI7OYfTk21s3UVTH7chSH6jyJYvblaP/p6rF2Zl8Ou675YEdm
+X4HrRfnPbzL7ClS87xZtzOwrMD7cc+gVs6+Ahd783IQj7SvgZuV90NyC9hVw
+EmlxfyFXKyD2NZl0Ix9VQH7wg9AWcpYSZlbJp+LIbZWoHPIdqiSHEmWO40NZ
+5EIlkv2uvCxg9pUwFMmUXzH7Snj62p8UMvtKNFSEZtcx+0ocN5p+HMLsf4pM
+w4Hxn975/wDxSwgC
+     "]]}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 3.084754476491872},
+  ImageSize->{362.9999999999998, Automatic},
+  Method->{},
+  PlotLabel->FormBox[
+    TagBox[
+     RowBox[{"LeibnizenBatura", "(", "n", ")"}], HoldForm], TraditionalForm],
+  PlotRange->{{0, 200.}, {3.084754476491872, 3.1982296537968367`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{4., 4.}, {0.0022695035460992942`, 
+   0.0022695035460992942`}}]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.59384668848302*^9, {3.593846726678223*^9, 3.593846742280488*^9}, 
+   3.593846849246648*^9, 3.593846922153542*^9, {3.6246982333133307`*^9, 
+   3.624698236327018*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["4) Leibniz-en seriea erabiliz, lor ezazu ",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  SuperscriptBox["10", 
+   RowBox[{"-", "4"}]]],
+  CellChangeTimes->{3.593519224602846*^9},
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" baino txikiagoko luzeradun ",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["[",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["a,b",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["]",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" tarte bat, \[Pi] zenbakia barne duena.",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.593519464096284*^9, 3.593519562585228*^9}, {
+   3.593519635544528*^9, 3.593519722555696*^9}, {3.593574888668276*^9, 
+   3.5935748928914557`*^9}, 3.59375484403125*^9, {3.5938311629093847`*^9, 
+   3.593831164994691*^9}, {3.593837502265625*^9, 3.5938375046875*^9}, 
+   3.5951443013813753`*^9},
+ TextJustification->1.,
+ FontColor->RGBColor[0.6, 0.4, 0.2]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"4", "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", "j"}], "+", "1"}], ")"}]}], "-", "1"}], ")"}]}], 
+     "\[Equal]", " ", 
+     RowBox[{"10", "^", 
+      RowBox[{"(", 
+       RowBox[{"-", "4"}], ")"}]}]}], ",", "j"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.624698194297134*^9, 3.624698198623008*^9}, {
+  3.62469827991064*^9, 3.624698473319972*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"j", "\[Rule]", "9999.75`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.624698474888023*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"j", "=", "10000"}]], "Input",
+ CellChangeTimes->{{3.624698591862465*^9, 3.624698595493466*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["10000"], "Output",
+ CellChangeTimes->{3.624698596638905*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LeibnizenBatura", "[", "j", "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.624698562006227*^9, 3.624698584069656*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["3.141492653590043`"], "Output",
+ CellChangeTimes->{{3.624698584983933*^9, 3.62469859973348*^9}},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LeibnizenBatura", "[", 
+   RowBox[{"j", "+", "1"}], "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.624698616461643*^9, 3.6246986304858828`*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["3.1416926435905435`"], "Output",
+ CellChangeTimes->{3.624698631817795*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", "3.141492653590043"}]], "Input",
+ CellChangeTimes->{{3.5935748957389936`*^9, 3.593574897388976*^9}, 
+   3.59383754328125*^9, {3.5941322973129997`*^9, 3.5941322973129997`*^9}, 
+   3.6246985077495832`*^9, {3.62469860808585*^9, 3.624698610461462*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"b", " ", "=", " ", "3.1416926435905435"}]], "Input",
+ CellChangeTimes->{{3.593574899824767*^9, 3.59357490074214*^9}, 
+   3.5938375500625*^9, {3.5941323011879997`*^9, 3.5941323011879997`*^9}, {
+   3.624698638005704*^9, 3.624698639805669*^9}},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sharp-en formula", "Subsubsection",
+ CellChangeTimes->{{3.593520122487852*^9, 3.593520127357299*^9}}],
+
+Cell[TextData[{
+ "1699an, Abraham Sharp matematikari ingelesak \[Pi] zenbakiaren 71 zifra \
+zehatz lortu zituen, ondoko formula erabiliz:\n\n\t\t\t",
+ Cell[BoxData[
+  RowBox[{"\[Pi]", " ", "=", 
+   RowBox[{
+    RowBox[{"2", 
+     SqrtBox["3"], " ", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"n", "=", "1"}], "\[Infinity]"], 
+      FractionBox[
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "/", "3"}], ")"}], 
+        RowBox[{"n", "-", "1"}]], 
+       RowBox[{
+        RowBox[{"2", "n"}], "-", "1"}]]}]}], " ", "=", " ", 
+    RowBox[{"2", 
+     SqrtBox["3"], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1", "-", 
+         FractionBox["1", 
+          RowBox[{"3", "\[Times]", "3"}]], "+", 
+         FractionBox["1", 
+          RowBox[{"5", "\[Times]", 
+           SuperscriptBox["3", "2"]}]], "-", 
+         FractionBox["1", 
+          RowBox[{"7", "\[Times]", 
+           SuperscriptBox["3", "3"]}]], "+"}], "..."}], ")"}], "."}]}]}]}]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center,
+  FontWeight->"Bold"],
+ " "
+}], "Text",
+ CellChangeTimes->{{3.593520111878566*^9, 3.593520111881901*^9}, {
+   3.593520148237754*^9, 3.59352022977765*^9}, 3.593585433698617*^9, {
+   3.59375485359375*^9, 3.593754880265625*^9}, {3.593755638875*^9, 
+   3.593755649328125*^9}, {3.59383756996875*^9, 3.593837583859375*^9}, {
+   3.593837626515625*^9, 3.593837790828125*^9}, {3.5951456268813753`*^9, 
+   3.5951456268813753`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SharpenBatura", "[", "k_Integer", "]"}], ":=", 
+  RowBox[{"2", " ", 
+   SqrtBox["3"], " ", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"i", "=", "1"}], "k"], 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "/", "3"}], ")"}], 
+      RowBox[{"i", "-", "1"}]], 
+     RowBox[{
+      RowBox[{"2", " ", "i"}], "-", "1"}]]}]}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.593517486454877*^9, 3.593517596163537*^9}, {
+  3.5935177101891403`*^9, 3.5935177300361853`*^9}, {3.593517787474403*^9, 
+  3.593517797752956*^9}, {3.593517853400186*^9, 3.593517854538604*^9}, {
+  3.593519093404253*^9, 3.593519102659485*^9}, {3.59357388806349*^9, 
+  3.593573905025999*^9}, {3.593574273789473*^9, 3.5935742824112186`*^9}, {
+  3.5935743271906767`*^9, 3.5935743352150517`*^9}, {3.593574368343687*^9, 
+  3.593574368979216*^9}, {3.593585029047858*^9, 3.5935850380301456`*^9}, {
+  3.5951455663970003`*^9, 3.5951455803813753`*^9}}],
+
+Cell[TextData[StyleBox["5) Sharpek  \[Pi] zenbakiaren 71 zifra zehatz \
+lortzeko, goiko seriearen zenbat batugai batu behar izan zituen?",
+ FontWeight->"Bold",
+ FontSlant->"Italic",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellChangeTimes->{{3.593574504784816*^9, 3.593574564187374*^9}, {
+   3.5935747004113894`*^9, 3.593574724248201*^9}, {3.593574800150543*^9, 
+   3.593574800841256*^9}, {3.5936356020805073`*^9, 3.5936356032800837`*^9}, 
+   3.593754957765625*^9, {3.59383785340625*^9, 3.593837854125*^9}, 
+   3.5951443288657503`*^9},
+ TextJustification->1.],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"2", 
+      SqrtBox["3"], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "/", "3"}], ")"}], 
+        RowBox[{"k", "-", "1"}]], "/", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", "k"}], "-", "1"}], ")"}]}]}], "==", 
+     RowBox[{"10", "^", 
+      RowBox[{"(", 
+       RowBox[{"-", "70"}], ")"}]}]}], ",", "k"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.625765992090802*^9, 3.625765993262802*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"k", "\[Rule]", "143.6946153971448`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.625765995021802*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"k", " ", "=", " ", "144"}]], "Input",
+ CellChangeTimes->{{3.593574867095479*^9, 3.5935748686310062`*^9}, 
+   3.593837834390625*^9, {3.5941323168129997`*^9, 3.5941323168129997`*^9}, 
+   3.5951456439282503`*^9, {3.625766006927802*^9, 3.625766008578802*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[TextData[{
+ StyleBox["6) Sharp-en seriea erabiliz, lor ezazu ",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  SuperscriptBox["10", 
+   RowBox[{"-", "100"}]]],
+  CellChangeTimes->{3.593519224602846*^9},
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" baino txikiagoko luzeradun ",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["[",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["a,b",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["]",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" tarte bat, \[Pi] zenbakia barne duena.",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.593519464096284*^9, 3.593519562585228*^9}, {
+   3.593519635544528*^9, 3.593519722555696*^9}, {3.593574809512903*^9, 
+   3.5935748614542828`*^9}, 3.593754975421875*^9, {3.5940986821098747`*^9, 
+   3.5940986853129997`*^9}, 3.5951443455532503`*^9},
+ TextJustification->1.,
+ FontColor->RGBColor[0.6, 0.4, 0.2]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", "*", 
+       RowBox[{"Sqrt", "[", "3", "]"}]}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"3", "^", "i"}], ")"}], "*", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", "i"}], "+", "1"}], ")"}]}], ")"}]}], "\[Equal]", 
+    RowBox[{"(", 
+     RowBox[{"10", "^", 
+      RowBox[{"-", "100"}]}], ")"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.625771460625802*^9, 3.625771461902802*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"i", "\[Rule]", "205.2418270335676`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.625771467097802*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"i", "=", "205", " "}]], "Input",
+ CellChangeTimes->{{3.625771476087802*^9, 3.6257715112728024`*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", 
+  RowBox[{"SharpenBatura", "[", "205", "]"}]}]], "Input",
+ CellChangeTimes->{{3.59357487347199*^9, 3.593574876854375*^9}, 
+   3.59383784171875*^9, {3.5941323223911247`*^9, 3.5941323223911247`*^9}, {
+   3.625771513681802*^9, 3.625771521994802*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"55249734138989024518227003363141557703190862005342355075105573344959\
+975761250012228624817248633994198330890232495952697880629203068762008103723709\
+201635160675600910451879758872995411102035895140233007276981644554874382562080\
+909348549716911943163255834981640103636965256878", "/", 
+  RowBox[{"(", 
+   RowBox[{
+   "10153591631732164634067361884476035310307661374061054859837506081905755879\
+417968034632771783381396815091253036230459807441570355696914379376276577418980\
+195238762946560255088801922003723087849745509533388901871114717506777916853119\
+681352010771517274736877867304563118000125", " ", 
+    SqrtBox["3"]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.625771523726802*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"b", " ", "=", 
+  RowBox[{"SharpenBatura", "[", "206", "]"}]}]], "Input",
+ CellChangeTimes->{{3.593574880131178*^9, 3.593574881060207*^9}, 
+   3.59383784171875*^9, {3.5941323265629997`*^9, 3.5941323265629997`*^9}, {
+   3.625771529349802*^9, 3.625771555778802*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"18416578046329674839409001121047185901063620668447451691701857781653\
+325253750004076208272416211331398678120464568719541783134642604800477470111420\
+465674859000916458328511982139936158535869159082607918349232611603571594389093\
+975096958403225961181109406627573937895679101376", "/", 
+  RowBox[{"(", 
+   RowBox[{
+   "33845305439107215446891206281586784367692204580203516199458353606352519598\
+059893448775905944604656050304176787434866024805234518989714597920921924729933\
+984129209821867516962673073345743626165818365111296339570382391689259722843732\
+27117336923839091578959289101521039333375", " ", 
+    SqrtBox["3"]}], ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{"b", "-", "a"}]}], "Input",
+ CellChangeTimes->{{3.6257715927878017`*^9, 3.6257715954458017`*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"18416578046329674839409001121047185901063620668447451691701857781653\
+325253750004076208272416211331398678120464568719541783134642604800477470111420\
+465674859000916458328511982139936158535869159082607918349232611603571594389093\
+975096958403225961181109406627573937895679101376", "/", 
+  RowBox[{"(", 
+   RowBox[{
+   "33845305439107215446891206281586784367692204580203516199458353606352519598\
+059893448775905944604656050304176787434866024805234518989714597920921924729933\
+984129209821867516962673073345743626165818365111296339570382391689259722843732\
+27117336923839091578959289101521039333375", " ", 
+    SqrtBox["3"]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.625771597316802*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"-", 
+  RowBox[{"2", "/", 
+   RowBox[{"(", 
+    RowBox[{
+    "8842555303666746946057368991893139556772010872284156165489575051256128114\
+595250974066061015873837291", " ", 
+     SqrtBox["3"]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{
+   RowBox[{"-", "2"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+    "8842555303666746946057368991893139556772010872284156165489575051256128114\
+595250974066061015873837291", " ", 
+     SqrtBox["3"]}], ")"}]}], "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.625771607366802*^9, 3.625771607409802*^9}, {
+  3.625771649131802*^9, 3.6257716557618017`*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  RowBox[{"2", "/", 
+   RowBox[{"(", 
+    RowBox[{
+    "8842555303666746946057368991893139556772010872284156165489575051256128114\
+595250974066061015873837291", " ", 
+     SqrtBox["3"]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.625771656849802*^9},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"-", "1.3058448590086076`*^-100"}]], "Output",
+ CellChangeTimes->{3.625771656855802*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Gregory-ren seriea", "Subsubsection",
+ CellChangeTimes->{{3.5937315669938593`*^9, 3.593731586912487*^9}, {
+  3.593732121222694*^9, 3.593732125378911*^9}}],
+
+Cell[TextData[{
+ "Leibniz-en eta Sharp-en formulak ondoko formula orokorraren kasu \
+partikularrak dira; demagun ",
+ Cell[BoxData[
+  StyleBox["x",
+   FontWeight->"Bold"]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center],
+ " zenbaki erreal bat dela,",
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"-", "1"}], "<", "x", "<", "1"}]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center,
+  FontWeight->"Bold"],
+ ",\n\n\t\t\t",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"arctan", " ", "x"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"n", "=", "0"}], "\[Infinity]"], 
+     RowBox[{
+      FractionBox[
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"-", "1"}], ")"}], "n"], 
+       RowBox[{
+        RowBox[{"2", "n"}], "+", "1"}]], 
+      SuperscriptBox["x", 
+       RowBox[{
+        RowBox[{"2", "n"}], "+", "1"}]]}]}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{"x", "-", 
+      FractionBox[
+       SuperscriptBox["x", "3"], "3"], "+", 
+      FractionBox[
+       SuperscriptBox["x", "5"], "5"], "-", 
+      FractionBox[
+       SuperscriptBox["x", "7"], "7"], "+"}], "..."}]}]}]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center,
+  FontWeight->"Bold"],
+ "\n\nSerieak James Gregory matematikari eskoziarraren izena darama. Serie \
+hori 1688 urtean argitaratu zuen. Badirudi, hala ere, XIV. mendearen bukaeran \
+Madhava Sangamagramako matematikari eta astronomo indiarrak deskubritu zuela \
+lehen aldiz.\n\nLeibniz-en formula ",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{"x", "=", "1"}],
+   FontWeight->"Bold"]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center],
+ " hartuz lortzen da (",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"arctan", " ", "1"}], " ", "=", " ", 
+   FractionBox["\[Pi]", "4"]}]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center,
+  FontWeight->"Bold"],
+ " baita), eta aldiz, Sharp-ek bere kalkuluetan erabilitako formula ",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{"x", "=", 
+    FractionBox["1", 
+     SqrtBox["3"]]}],
+   FontWeight->"Bold"]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center],
+ " hartuz (",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{
+    RowBox[{"arctan", " ", 
+     FractionBox["1", 
+      SqrtBox["3"]]}], " ", "=", " ", 
+    FractionBox["\[Pi]", "6"]}],
+   FontWeight->"Bold"]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center],
+ " delarik)."
+}], "Text",
+ CellChangeTimes->{{3.593731678207514*^9, 3.593731816308052*^9}, {
+   3.593731849847578*^9, 3.593731999052703*^9}, {3.593732134731442*^9, 
+   3.593732247696904*^9}, {3.593732309085915*^9, 3.593732387221874*^9}, {
+   3.593732419217458*^9, 3.593732517078187*^9}, {3.593732548777969*^9, 
+   3.593732558888063*^9}, {3.593732592299704*^9, 3.593732649124597*^9}, 
+   3.593755088375*^9, 3.59375512228125*^9, {3.593755216890625*^9, 
+   3.59375532809375*^9}, {3.5938378974375*^9, 3.593837942375*^9}, {
+   3.593837974046875*^9, 3.59383840971875*^9}, {3.593838446359375*^9, 
+   3.5938386849375*^9}, {3.5951443641001253`*^9, 3.5951443641001253`*^9}, 
+   3.5951457523501253`*^9},
+ TextJustification->1.],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GregoryrenSeriea", "[", 
+   RowBox[{"x_", ",", "k_Integer"}], "]"}], " ", ":=", " ", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"i", "=", "0"}], "k"], 
+   RowBox[{
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], "i"], 
+     RowBox[{
+      RowBox[{"2", " ", "i"}], "+", "1"}]], 
+    SuperscriptBox["x", 
+     RowBox[{
+      RowBox[{"2", "i"}], "+", "1"}]]}]}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.593731799410323*^9, 3.593731800988245*^9}, {
+  3.593732704609241*^9, 3.5937327377913513`*^9}, {3.5951457970063753`*^9, 
+  3.5951458187407503`*^9}}],
+
+Cell["\<\
+Probak egin itzazu ondoko irudiekin, eta saia zaitez ulertzen irudietan \
+agertzen dena.\
+\>", "Text",
+ CellChangeTimes->{{3.593737698868815*^9, 3.593737731276885*^9}, 
+   3.59375533796875*^9, {3.5938387045625*^9, 3.5938387314375*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["GregoryIrudia"], "Input",
+ InitializationCell->True,
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 40, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 1, "Batugai kopurua"}, 1, 40, 1}}, 
+    Typeset`size$$ = {750., {212., 221.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = False, $CellContext`n$346$$ =
+     0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$346$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Column[{
+         $CellContext`fgraph[{
+           Part[$CellContext`ff, 1]}, {-1, 1, $CellContext`n$$, 0}], " ", " ", 
+         $CellContext`egraph[{
+           Part[$CellContext`ff, 1]}, {-1, 1, $CellContext`n$$, 0}]}, 
+        Alignment -> {Left, Top}], 
+      "Specifications" :> {{{$CellContext`n$$, 1, "Batugai kopurua"}, 1, 40, 
+         1, Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{822., {280., 289.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`fgraph[{
+          Pattern[$CellContext`f, 
+           Blank[]]}, {
+          Pattern[$CellContext`c, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`a, 
+           Blank[]]}] := Plot[{
+          $CellContext`f[$CellContext`t], 
+          $CellContext`p[$CellContext`f, {$CellContext`t, $CellContext`n, \
+$CellContext`a}]}, {$CellContext`t, $CellContext`c, $CellContext`b}, Ticks -> 
+         Automatic, PlotRange -> {-1, 1}, AspectRatio -> Full, PlotLabel -> 
+         SequenceForm[
+          "arctan(x) eta ", $CellContext`n, ". batura partzialak"], 
+         PlotStyle -> {{
+            Thickness[0.003], 
+            ColorData["HTML", "SlateBlue"]}, {
+            Thickness[0.003], 
+            RGBColor[1, 0.47, 0]}}, ImageSize -> {500, 100}], $CellContext`p[
+         Pattern[$CellContext`f, 
+          Blank[]], {
+          Pattern[$CellContext`x, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`a, 
+           Blank[]]}] := 
+       Sum[Derivative[$CellContext`k][$CellContext`f][$CellContext`a] \
+(($CellContext`x - $CellContext`a)^$CellContext`k/
+          Factorial[$CellContext`k]), {$CellContext`k, 0, $CellContext`n}], 
+       Attributes[Derivative] = {
+        NHoldAll, 
+         ReadProtected}, $CellContext`ff = {$CellContext`F}, $CellContext`F[
+         Pattern[$CellContext`x, 
+          Blank[]]] := ArcTan[$CellContext`x], $CellContext`egraph[{
+          Pattern[$CellContext`f, 
+           Blank[]]}, {
+          Pattern[$CellContext`c, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`a, 
+           Blank[]]}] := LogPlot[{
+          
+          Abs[$CellContext`f[$CellContext`t] - $CellContext`p[$CellContext`f, \
+{$CellContext`t, $CellContext`n, $CellContext`a}]]}, {$CellContext`t, \
+$CellContext`c, $CellContext`b}, PlotLabel -> 
+         SequenceForm[$CellContext`n, ". hondarra"], Ticks -> Automatic, 
+         PlotRange -> Automatic, AspectRatio -> Full, PlotStyle -> {{
+            Thickness[0.005], Purple}}, ImageSize -> {500, 150}]}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.5937371516501493`*^9, 3.593737308605988*^9, 3.5937374526842957`*^9, {
+   3.593737541784347*^9, 3.593737569707213*^9}, 3.593739788339953*^9, {
+   3.593755353015625*^9, 3.59375535428125*^9}, 3.5951446287720003`*^9, 
+   3.5951551462876253`*^9, 3.5951555485220003`*^9, 3.6246958495756207`*^9, 
+   3.624698833040594*^9, 3.625736849707199*^9, 3.625763910328802*^9, 
+   3.625771465925802*^9, 3.625773457344802*^9, {3.6257743584718018`*^9, 
+   3.6257743617018023`*^9}},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Machin-en formula", "Subsubsection",
+ CellChangeTimes->{{3.593737752736512*^9, 3.593737762942429*^9}, {
+  3.593832385837906*^9, 3.59383238828272*^9}}],
+
+Cell[TextData[{
+ "John Machin astronomia irakasle ingelesak \[Pi] zenbakiaren lehen 100 zifra \
+hamartar zehatzak lortu zituen 1751 urtean; horretarako, ondoko formula \
+aurkitu zuen:\n\n\t\t\t\t\t",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{"\[Pi]", "=", 
+    RowBox[{
+     RowBox[{"16", "arctan", " ", 
+      FractionBox["1", "5"]}], " ", "-", 
+     RowBox[{"4", "arctan", " ", 
+      FractionBox["1", "239"], " "}]}]}],
+   FontWeight->"Bold"]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center],
+ ".\n\nFormula hori Gregory-ren seriearekin konbinatuta,",
+ " \[Pi] ",
+ "zebakiaren hurbilpena modu eraginkorrean lortzeko bidea aurkitu zuen."
+}], "Text",
+ CellChangeTimes->{{3.59373806395881*^9, 3.593738439150796*^9}, {
+   3.59375540328125*^9, 3.593755417140625*^9}, {3.593755594046875*^9, 
+   3.59375559815625*^9}, 3.59375567965625*^9, {3.593838787609375*^9, 
+   3.593838896484375*^9}, {3.593838932640625*^9, 3.59383895021875*^9}, {
+   3.5938408004375*^9, 3.593840816046875*^9}},
+ TextJustification->1.],
+
+Cell[TextData[{
+ "Ondoko funtzioak Machin-en metodoarekin lortzen den",
+ " \[Pi] ",
+ "zenbakiaren hurbilpena kalkulatzen du, ",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{"arctan", " ", 
+    FractionBox["1", "5"]}],
+   FontWeight->"Bold"]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center],
+ "-en Gregory-ren seriearen n. batura partziala eta ",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{"arctan", " ", 
+    FractionBox["1", "239"]}],
+   FontWeight->"Bold"]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center],
+ "-ren Gregory-ren seriearen m. batura partziala kalkulatuz."
+}], "Text",
+ CellChangeTimes->{{3.593738671259954*^9, 3.593738673737955*^9}, {
+   3.593738706003251*^9, 3.593738845362895*^9}, 3.5937554743125*^9, 
+   3.593755716578125*^9, {3.593838973703125*^9, 3.593838984875*^9}, {
+   3.593839021546875*^9, 3.593839107140625*^9}, {3.5938404284375*^9, 
+   3.5938404284375*^9}, 3.593840808203125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MachinenPi", "[", 
+   RowBox[{"k_Integer", ",", "l_Integer"}], "]"}], ":=", " ", 
+  RowBox[{
+   RowBox[{"16", " ", 
+    RowBox[{"GregoryrenSeriea", "[", 
+     RowBox[{
+      RowBox[{"1", "/", "5"}], ",", "k"}], "]"}]}], "-", 
+   RowBox[{"4", 
+    RowBox[{"GregoryrenSeriea", "[", 
+     RowBox[{
+      RowBox[{"1", "/", "239"}], ",", "l"}], "]"}]}]}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.5937384430822783`*^9, 3.593738487531262*^9}, {
+   3.593738520245447*^9, 3.593738532971505*^9}, {3.593738570929532*^9, 
+   3.5937385713757343`*^9}, 3.593738626817462*^9, {3.5937387196229467`*^9, 
+   3.5937387227906847`*^9}, {3.5951459592563753`*^9, 3.5951459679282503`*^9}}],
+
+Cell[TextData[{
+ StyleBox["7) Lor ezazu ",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["|MachinenPi[k,l] - \[Pi]|",
+  FontWeight->"Bold",
+  FontColor->GrayLevel[0]],
+ StyleBox[" errorearen goi bornea, eta defini ezazu goi borne hori \
+kalkulatzen duen ",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["MachinenErrorea[k,l]",
+  FontWeight->"Bold",
+  FontColor->GrayLevel[0]],
+ StyleBox[" funtzioa.",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.5937389165596437`*^9, 3.59373899458381*^9}, {
+   3.593739346305257*^9, 3.593739385329358*^9}, {3.59375573640625*^9, 
+   3.59375574825*^9}, {3.59375578278125*^9, 3.593755806703125*^9}, {
+   3.593839179859375*^9, 3.593839205125*^9}, {3.593841131890625*^9, 
+   3.59384114221875*^9}, 3.5951443922720003`*^9, {3.5951460090376253`*^9, 
+   3.5951460182251253`*^9}, 3.5951556365220003`*^9, {3.6257379580177994`*^9, 
+   3.6257379591273994`*^9}},
+ TextJustification->1.],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MachinenErrorea", "[", 
+   RowBox[{"k_Integer", ",", "l_Integer"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Abs", "[", 
+   RowBox[{
+    RowBox[{"16", 
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], 
+       RowBox[{"k", "+", "1"}]], 
+      RowBox[{
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{"k", "+", "1"}], ")"}]}], "+", "1"}]], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "/", "5"}], ")"}], 
+      RowBox[{
+       RowBox[{"2", 
+        RowBox[{"(", 
+         RowBox[{"k", "+", "1"}], ")"}]}], "+", "1"}]]}], " ", "+", 
+    RowBox[{"4", 
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], 
+       RowBox[{"l", "+", "1"}]], 
+      RowBox[{
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{"l", "+", "1"}], ")"}]}], "+", "1"}]], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "/", "239"}], ")"}], 
+      RowBox[{
+       RowBox[{"2", 
+        RowBox[{"(", 
+         RowBox[{"l", "+", "1"}], ")"}]}], "+", "1"}]]}]}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.593739009880777*^9, 3.59373901344166*^9}, 
+   3.593739389571216*^9, {3.59376388684375*^9, 3.59376389528125*^9}, {
+   3.5951460214907503`*^9, 3.5951460233501253`*^9}, {3.5951557461626253`*^9, 
+   3.5951557653032503`*^9}, 3.625736535479599*^9, {3.625736710727399*^9, 
+   3.6257367313681993`*^9}, 3.625737712060999*^9, 3.6257382359785995`*^9, 
+   3.6257383376371994`*^9, 3.625771833431802*^9},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[TextData[StyleBox["8) Funtzio horrek k eta l desberdinetarako ematen \
+dituen balioekin probak eginez, ondoriozta ezazu zein k eta l hartu behar \
+diren \[Pi]-ren lehen 100 zifra hamartar zehatzak lortzeko, ahal den \
+eragiketa aritmetiko gutxien egiteko.",
+ FontWeight->"Bold",
+ FontSlant->"Italic"]], "Text",
+ CellChangeTimes->{{3.5937390487696667`*^9, 3.5937392322023087`*^9}, {
+   3.593755809984375*^9, 3.593755814046875*^9}, {3.593839250609375*^9, 
+   3.593839274203125*^9}, 3.5951444018813753`*^9, {3.5951460800063753`*^9, 
+   3.5951460920532503`*^9}},
+ TextJustification->1.,
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"16", 
+       FractionBox["1", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{"k", "+", "1"}], ")"}]}], "+", "1"}]], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "/", "5"}], ")"}], 
+        RowBox[{
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{"k", "+", "1"}], ")"}]}], "+", "1"}]]}], " ", "+", 
+      RowBox[{"4", 
+       FractionBox["1", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{"50", "+", "1"}], ")"}]}], "+", "1"}]], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "/", "239"}], ")"}], 
+        RowBox[{
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{"50", "+", "1"}], ")"}]}], "+", "1"}]]}]}], "\[Equal]", 
+     RowBox[{"10", "^", 
+      RowBox[{"(", 
+       RowBox[{"-", "100"}], ")"}]}]}], ",", "k"}], "]"}], "]"}]], "Input",
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"k", "\[Rule]", "69.35619664333176`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.625772003449802*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"16", 
+       FractionBox["1", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{"k", "+", "1"}], ")"}]}], "+", "1"}]], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "/", "5"}], ")"}], 
+        RowBox[{
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{"k", "+", "1"}], ")"}]}], "+", "1"}]]}], " ", "+", 
+      RowBox[{"4", 
+       FractionBox["1", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{"50", "+", "1"}], ")"}]}], "+", "1"}]], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "/", "239"}], ")"}], 
+        RowBox[{
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{"25", "+", "1"}], ")"}]}], "+", "1"}]]}]}], "\[Equal]", 
+     RowBox[{"10", "^", 
+      RowBox[{"(", 
+       RowBox[{"-", "100"}], ")"}]}]}], ",", "k"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6257719825378017`*^9, 3.625771986987802*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"k", "\[Rule]", "69.35619664333176`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.625771960456802*^9, 3.6257719906178017`*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"16", 
+       FractionBox["1", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{"k", "+", "1"}], ")"}]}], "+", "1"}]], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "/", "5"}], ")"}], 
+        RowBox[{
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{"k", "+", "1"}], ")"}]}], "+", "1"}]]}], " ", "+", 
+      RowBox[{"4", 
+       FractionBox["1", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{"50", "+", "1"}], ")"}]}], "+", "1"}]], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "/", "239"}], ")"}], 
+        RowBox[{
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{"19", "+", "1"}], ")"}]}], "+", "1"}]]}]}], "\[Equal]", 
+     RowBox[{"10", "^", 
+      RowBox[{"(", 
+       RowBox[{"-", "100"}], ")"}]}]}], ",", "k"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6257720183978024`*^9, 3.625772043263802*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"k", "\[Rule]", 
+    RowBox[{"68.61780875657915`", "\[VeryThinSpace]", "+", 
+     RowBox[{"0.9716857092174451`", " ", "\[ImaginaryI]"}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.625772023936802*^9, 3.625772044376802*^9}},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"N", "[", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"16", 
+        FractionBox["1", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{"k", "+", "1"}], ")"}]}], "+", "1"}]], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"1", "/", "5"}], ")"}], 
+         RowBox[{
+          RowBox[{"2", 
+           RowBox[{"(", 
+            RowBox[{"k", "+", "1"}], ")"}]}], "+", "1"}]]}], " ", "+", 
+       RowBox[{"4", 
+        FractionBox["1", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{"50", "+", "1"}], ")"}]}], "+", "1"}]], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"1", "/", "239"}], ")"}], 
+         RowBox[{
+          RowBox[{"2", 
+           RowBox[{"(", 
+            RowBox[{"20", "+", "1"}], ")"}]}], "+", "1"}]]}]}], "\[Equal]", 
+      RowBox[{"10", "^", 
+       RowBox[{"(", 
+        RowBox[{"-", "100"}], ")"}]}]}], ",", "k"}], "]"}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.6257720486358023`*^9, 3.625772055249802*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"k", "\[Rule]", "69.35626099413713`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.6257720577358017`*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell["\<\
+Ikusten dugunez l - ek izan dezakeen baliorik txikiena 20 da beraz :\
+\>", "Text",
+ CellChangeTimes->{{3.6257720619518023`*^9, 3.625772097005802*^9}, 
+   3.625772159413802*^9},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"k", " ", "=", " ", "70"}]], "Input",
+ CellChangeTimes->{{3.593739247589355*^9, 3.593739303606999*^9}, 
+   3.59383930221875*^9, {3.5941324461098747`*^9, 3.5941324461098747`*^9}, {
+   3.5951460346626253`*^9, 3.5951460707720003`*^9}, {3.619504650786875*^9, 
+   3.619504652349375*^9}, {3.625772099875802*^9, 3.625772101601802*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"l", " ", "=", " ", "20"}]], "Input",
+ CellChangeTimes->{{3.593739247589355*^9, 3.593739303606999*^9}, 
+   3.59383930221875*^9, {3.5941324461098747`*^9, 3.5941324461098747`*^9}, {
+   3.5951460346626253`*^9, 3.5951460707720003`*^9}, {3.619504654380625*^9, 
+   3.61950465699*^9}, {3.625772105932802*^9, 3.625772106652802*^9}},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Bailey-Borwein-Plouffe-en seriea", "Subsubsection",
+ CellChangeTimes->{{3.5935835964867764`*^9, 3.5935836139163027`*^9}, {
+   3.593585680149239*^9, 3.593585683139971*^9}, 3.593635154764947*^9, 
+   3.5941320130942497`*^9}],
+
+Cell[TextData[{
+ "1995 urtean, ",
+ "Simon Plouffe, David Bailey eta Peter Borwein matematikariek ondoko formula \
+aurkitu zuten:\n\n\t\t\t\t",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{"\[Pi]", " ", "=", " ", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"n", "=", "0"}], "\[Infinity]"], 
+     RowBox[{
+      SuperscriptBox["16", 
+       RowBox[{"-", "n"}]], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["4", 
+          RowBox[{
+           RowBox[{"8", " ", "n"}], "+", "1"}]], "-", 
+         FractionBox["2", 
+          RowBox[{
+           RowBox[{"8", " ", "n"}], "+", "4"}]], "-", 
+         FractionBox["1", 
+          RowBox[{
+           RowBox[{"8", " ", "n"}], "+", "5"}]], "-", 
+         FractionBox["1", 
+          RowBox[{
+           RowBox[{"8", "n"}], "+", "6"}]]}], ")"}], "."}]}]}]}],
+   FontFamily->"Courier New",
+   FontWeight->"Bold"]], "Text",
+  CellChangeTimes->{{3.593584693260313*^9, 3.5935848106595793`*^9}, {
+    3.593584898021096*^9, 3.59358493055663*^9}, {3.593585722335416*^9, 
+    3.593585765191617*^9}, {3.593585831903474*^9, 3.593585849684516*^9}, {
+    3.593586280003828*^9, 3.5935862893017483`*^9}, {3.593586438629778*^9, 
+    3.593586440061363*^9}, 3.5936334554027843`*^9}]
+}], "Text",
+ CellChangeTimes->{{3.593632964191538*^9, 3.593632989305439*^9}, {
+   3.593633417673119*^9, 3.593633429002899*^9}, 3.593633475115632*^9, {
+   3.59375585028125*^9, 3.593755861515625*^9}, {3.593839327484375*^9, 
+   3.593839351953125*^9}, {3.5951462409438753`*^9, 3.5951462409438753`*^9}},
+ TextJustification->1.],
+
+Cell["\<\
+Formula horrek posible egiten du modu oso eraginkorrean \[Pi] zenbakiaren 16 \
+oinarriko adierazpeneko edozein digitu kalkulatzea. (Horren gaineko xehetasun \
+gehiago, nahi izanez gero, Wikepedian aurki daiteke.)
+
+Bestalde, \[Pi] zenbakiaren hurbilpenak kalkulatzeko ere balio du.\
+\>", "Text",
+ CellChangeTimes->{{3.5936334623854628`*^9, 3.593633525324131*^9}, {
+   3.5936335958959427`*^9, 3.593633628025223*^9}, {3.593633708364233*^9, 
+   3.593633806785934*^9}, {3.59375586596875*^9, 3.59375588990625*^9}, 
+   3.593839371421875*^9, 3.593839420796875*^9, {3.593840828296875*^9, 
+   3.593840832296875*^9}},
+ TextJustification->1.],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BBPSeriea", "[", "k_Integer", "]"}], ":=", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{
+     StyleBox["i",
+      FontSlant->"Italic"], "=", "0"}], "k"], 
+   RowBox[{
+    SuperscriptBox["16", 
+     RowBox[{"-", 
+      StyleBox["i",
+       FontSlant->"Italic"]}]], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox["4", 
+       RowBox[{
+        RowBox[{"8", " ", 
+         StyleBox["i",
+          FontSlant->"Italic"]}], "+", "1"}]], "-", 
+      FractionBox["2", 
+       RowBox[{
+        RowBox[{"8", " ", 
+         StyleBox["i",
+          FontSlant->"Italic"]}], "+", "4"}]], "-", 
+      FractionBox["1", 
+       RowBox[{
+        RowBox[{"8", " ", 
+         StyleBox["i",
+          FontSlant->"Italic"]}], "+", "5"}]], "-", 
+      FractionBox["1", 
+       RowBox[{
+        RowBox[{"8", 
+         StyleBox["i",
+          FontSlant->"Italic"]}], "+", "6"}]]}], ")"}]}]}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.593584693260313*^9, 3.5935848106595793`*^9}, {
+  3.593584898021096*^9, 3.59358493055663*^9}, {3.593585722335416*^9, 
+  3.593585765191617*^9}, {3.593585831903474*^9, 3.593585849684516*^9}, {
+  3.59358637318088*^9, 3.593586416846806*^9}, {3.5951462610532503`*^9, 
+  3.5951462755220003`*^9}, {3.5951560042563753`*^9, 3.5951560198970003`*^9}}],
+
+Cell["Esate baterako,", "Text",
+ CellChangeTimes->{{3.5936345274631968`*^9, 3.59363453044452*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   RowBox[{"BBPSeriea", "[", "100", "]"}], ",", "200"}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.5951559165532503`*^9, {3.5951559746001253`*^9, 3.5951559751157503`*^9}, {
+   3.625740108308999*^9, 3.625740111085799*^9}}],
+
+Cell[BoxData["3.\
+141592653589793238462643383279502884197169399375105820974944592307816406286208\
+998628034825342117067982148086513282306647093844021470341350581246500979311726\
+3034700912947028314920803587498472897142831400028848322`200."], "Output",
+ CellChangeTimes->{{3.5951559670063753`*^9, 3.5951559765532503`*^9}, 
+   3.5951560275376253`*^9, 3.625740112162199*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Ondoren, goiko hurbilpenak zenbat zifra zehatz dituen kalkulatu behar duzu. \
+Horretarako, kalkulatu dugun batura partzialaren hondarraren goi bornea lortu \
+behar da. Languntza gisa, kontuan hartu Bailey-Borwein-Plouffe-en seriea \n\n",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"n", "=", "0"}], "\[Infinity]"], 
+    RowBox[{
+     SuperscriptBox["16", 
+      RowBox[{"-", "n"}]], 
+     SubscriptBox["c", "n"]}]}],
+   FontWeight->"Bold"]],
+  InitializationCell->True,
+  CellChangeTimes->{{3.593584693260313*^9, 3.5935848106595793`*^9}, {
+   3.593584898021096*^9, 3.59358493055663*^9}, {3.593585722335416*^9, 
+   3.593585765191617*^9}, {3.593585831903474*^9, 3.593585849684516*^9}, {
+   3.59358637318088*^9, 3.593586416846806*^9}}],
+ "  modukoa dela, non ",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{
+    SubscriptBox["c", "n"], "=", 
+    RowBox[{
+     FractionBox["4", 
+      RowBox[{
+       RowBox[{"8", " ", "n"}], "+", "1"}]], "-", 
+     FractionBox["2", 
+      RowBox[{
+       RowBox[{"8", " ", "n"}], "+", "4"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "n"}], "+", "5"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "n"}], "+", "6"}]]}]}],
+   FontWeight->"Bold"]],
+  InitializationCell->True,
+  CellChangeTimes->{{3.593584693260313*^9, 3.5935848106595793`*^9}, {
+   3.593584898021096*^9, 3.59358493055663*^9}, {3.593585722335416*^9, 
+   3.593585765191617*^9}, {3.593585831903474*^9, 3.593585849684516*^9}, {
+   3.59358637318088*^9, 3.593586416846806*^9}}],
+ " den, eta  ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["c", "n"], ">", 
+   SubscriptBox["c", 
+    RowBox[{"n", "+", "1"}]]}]],
+  CellChangeTimes->{3.593635006777129*^9},
+  FontWeight->"Bold"],
+ " betetzen dela ",
+ Cell[BoxData[
+  StyleBox["n",
+   FontSlant->"Italic"]],
+  CellChangeTimes->{3.593635006777129*^9},
+  FontWeight->"Bold"],
+ " guztietarako."
+}], "Text",
+ CellChangeTimes->{{3.593634543572034*^9, 3.593634747958953*^9}, {
+   3.593634931353648*^9, 3.593634962744272*^9}, {3.5936349935149403`*^9, 
+   3.593635016051996*^9}, {3.5936350725818253`*^9, 3.593635114357335*^9}, {
+   3.5936351699998493`*^9, 3.5936353667888823`*^9}, {3.5936354276259403`*^9, 
+   3.593635514300997*^9}, {3.593739451372981*^9, 3.593739451924848*^9}, 
+   3.5937554819375*^9, {3.59375594075*^9, 3.59375596996875*^9}, {
+   3.593764173421875*^9, 3.59376417540625*^9}, 3.593764303859375*^9, {
+   3.593764342984375*^9, 3.593764347453125*^9}, {3.59376455240625*^9, 
+   3.5937645840625*^9}, {3.5937649008125*^9, 3.59376490215625*^9}, {
+   3.593839511203125*^9, 3.593839672609375*^9}, {3.5938403734375*^9, 
+   3.5938404033125*^9}, 3.593841207421875*^9, {3.5951463060063753`*^9, 
+   3.5951463298032503`*^9}},
+ TextJustification->1.],
+
+Cell[TextData[{
+ StyleBox["9) Beraz, zenbat zifra hamartar zehatz ditu",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" ",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["BBPSeriea[100]",
+  FontWeight->"Bold"],
+ StyleBox[" ",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["eginez lortutako \[Pi]-ren hurbilpenak?",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.593634543572034*^9, 3.593634747958953*^9}, {
+   3.593634931353648*^9, 3.593634962744272*^9}, {3.5936349935149403`*^9, 
+   3.593635016051996*^9}, {3.5936350725818253`*^9, 3.593635114357335*^9}, {
+   3.5936351699998493`*^9, 3.5936353667888823`*^9}, {3.5936354276259403`*^9, 
+   3.593635514300997*^9}, {3.593739451372981*^9, 3.593739451924848*^9}, 
+   3.5937554819375*^9, {3.59375594075*^9, 3.59375596996875*^9}, {
+   3.593764173421875*^9, 3.59376417540625*^9}, 3.593764303859375*^9, {
+   3.593764342984375*^9, 3.593764347453125*^9}, {3.59376455240625*^9, 
+   3.5937645840625*^9}, {3.5937649008125*^9, 3.59376490215625*^9}, {
+   3.593839511203125*^9, 3.59383967946875*^9}, 3.593839741546875*^9, 
+   3.5951444447720003`*^9},
+ TextJustification->1.],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   SuperscriptBox["16", 
+    RowBox[{"-", "101"}]], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox["4", 
+      RowBox[{
+       RowBox[{"8", " ", "101"}], "+", "1"}]], "-", 
+     FractionBox["2", 
+      RowBox[{
+       RowBox[{"8", " ", "101"}], "+", "4"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "101"}], "+", "5"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "101"}], "+", "6"}]]}], ")"}]}], "]"}]], "Input",
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["5.520393508369563`*^-127"], "Output",
+ CellChangeTimes->{3.625766255866802*^9},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"ZifraZehatzKopurua", " ", "=", " ", "127"}]], "Input",
+ CellChangeTimes->{{3.5936354537399387`*^9, 3.59363545443395*^9}, {
+  3.593638640822422*^9, 3.593638675438459*^9}, {3.59383971725*^9, 
+  3.5938397285*^9}, {3.619504814818125*^9, 3.619504814818125*^9}, {
+  3.625766274422802*^9, 3.625766274920802*^9}},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[TextData[StyleBox["10) Ondoriozta ezazu BBP seriearen zenbat batugai \
+batu behar diren \[Pi]-ren 1000 zifra zehatz lortzeko.",
+ FontWeight->"Bold",
+ FontSlant->"Italic",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellChangeTimes->{{3.593638464751717*^9, 3.593638578241119*^9}, {
+   3.593739456237228*^9, 3.593739456893008*^9}, {3.593755987171875*^9, 
+   3.593755994421875*^9}, {3.593839754015625*^9, 3.593839755078125*^9}, 
+   3.5951444488188753`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   SuperscriptBox["16", 
+    RowBox[{"-", "300"}]], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox["4", 
+      RowBox[{
+       RowBox[{"8", " ", "300"}], "+", "1"}]], "-", 
+     FractionBox["2", 
+      RowBox[{
+       RowBox[{"8", " ", "300"}], "+", "4"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "300"}], "+", "5"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "300"}], "+", "6"}]]}], ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.625766535556802*^9, 3.625766571726802*^9}},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["1.50869452763579419457226089`15.954589770191005*^-367"], \
+"Output",
+ CellChangeTimes->{3.625766579263802*^9},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   SuperscriptBox["16", 
+    RowBox[{"-", "500"}]], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox["4", 
+      RowBox[{
+       RowBox[{"8", " ", "500"}], "+", "1"}]], "-", 
+     FractionBox["2", 
+      RowBox[{
+       RowBox[{"8", " ", "500"}], "+", "4"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "500"}], "+", "5"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "500"}], "+", "6"}]]}], ")"}]}], "]"}]], "Input",
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["8.15335042334815783871572446`15.954589770191005*^-609"], \
+"Output",
+ CellChangeTimes->{3.625766696856802*^9},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   SuperscriptBox["16", 
+    RowBox[{"-", "700"}]], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox["4", 
+      RowBox[{
+       RowBox[{"8", " ", "700"}], "+", "1"}]], "-", 
+     FractionBox["2", 
+      RowBox[{
+       RowBox[{"8", " ", "700"}], "+", "4"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "700"}], "+", "5"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "700"}], "+", "6"}]]}], ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.625766704302802*^9, 3.625766719690802*^9}},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["6.24118974139383876051789045`15.954589770191005*^-850"], \
+"Output",
+ CellChangeTimes->{3.625766723282802*^9},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   SuperscriptBox["16", 
+    RowBox[{"-", "850"}]], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox["4", 
+      RowBox[{
+       RowBox[{"8", " ", "850"}], "+", "1"}]], "-", 
+     FractionBox["2", 
+      RowBox[{
+       RowBox[{"8", " ", "850"}], "+", "4"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "850"}], "+", "5"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "850"}], "+", "6"}]]}], ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.625766737825802*^9, 3.625766758708802*^9}},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["1.02025647258486923814945835265`15.954589770191005*^-1030"], \
+"Output",
+ CellChangeTimes->{3.625766762719802*^9},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   SuperscriptBox["16", 
+    RowBox[{"-", "825"}]], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox["4", 
+      RowBox[{
+       RowBox[{"8", " ", "825"}], "+", "1"}]], "-", 
+     FractionBox["2", 
+      RowBox[{
+       RowBox[{"8", " ", "825"}], "+", "4"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "825"}], "+", "5"}]], "-", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"8", " ", "825"}], "+", "6"}]]}], ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.625766778406802*^9, 3.625766811083802*^9}},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData["1.372863643184389944217766721013`15.954589770191005*^-1000"], \
+"Output",
+ CellChangeTimes->{3.625766813507802*^9},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"k", " ", "=", " ", "825"}]], "Input",
+ CellChangeTimes->{{3.593638622389243*^9, 3.593638625277326*^9}, 
+   3.593839738140625*^9, {3.5941324935161247`*^9, 3.5941324935161247`*^9}, 
+   3.5951464149595003`*^9, {3.625766844166802*^9, 3.625766847333802*^9}},
+ FontColor->GrayLevel[0],
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[TextData[StyleBox["11) Leibniz-en formularekin zenbat batugai batu \
+beharko lirateke doitasun bera lortzeko? Eta Sharp-en seriearekin?",
+ FontWeight->"Bold",
+ FontSlant->"Italic",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellChangeTimes->{{3.5936387900383377`*^9, 3.5936388366539497`*^9}, {
+   3.593739459989148*^9, 3.593739460452993*^9}, 3.59375599909375*^9, 
+   3.5951444513345003`*^9},
+ TextJustification->1.],
+
+Cell["Leibniz - erekin :", "Text",
+ CellChangeTimes->{{3.625766902942802*^9, 3.6257669157688017`*^9}, 
+   3.625767009045802*^9},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"4", "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "k"}], "+", "1"}], ")"}]}], "==", 
+     RowBox[{"10", "^", 
+      RowBox[{"(", 
+       RowBox[{"-", "1000"}], ")"}]}]}], ",", "k"}], "]"}], "]"}]], "Input",
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+   "k", "\[Rule]", "1.999999999999999999999999999`15.954589770191005*^1000"}],
+    "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.625766953980802*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell["Sharp - rekin :", "Text",
+ CellChangeTimes->{{3.6257669831038017`*^9, 3.625767017806802*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"2", 
+      SqrtBox["3"], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "/", "3"}], ")"}], 
+        RowBox[{
+         RowBox[{"2", "k"}], "-", "1"}]], "/", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"4", "k"}], "-", "1"}], ")"}]}]}], "==", 
+     RowBox[{"10", "^", 
+      RowBox[{"(", 
+       RowBox[{"-", "1000"}], ")"}]}]}], ",", "k"}], "]"}], "]"}]], "Input",
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"k", "\[Rule]", "1045.2222964742339`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.625766972765802*^9},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Beste hainbat serie", "Subsubsection",
+ CellChangeTimes->{{3.593640631690879*^9, 3.593640635990822*^9}}],
+
+Cell[TextData[{
+ "Ramanujan matemarikari indiarrak 1910ean lortutako seriea:\n\n\t\t\t\t\t",
+ Cell[BoxData[
+  RowBox[{
+   FractionBox[
+    RowBox[{"1", " "}], "\[Pi]"], "=", " ", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{
+      StyleBox["n",
+       FontSlant->"Italic"], "=", "0"}], "\[Infinity]"], 
+    RowBox[{
+     FractionBox[
+      RowBox[{"2", 
+       SqrtBox["2"]}], "9801"], 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["396", 
+        RowBox[{
+         RowBox[{"-", "4"}], 
+         StyleBox["n",
+          FontSlant->"Italic"]}]], 
+       RowBox[{"(", 
+        RowBox[{"1103", " ", "+", " ", 
+         RowBox[{"26390", 
+          StyleBox["n",
+           FontSlant->"Italic"]}]}], ")"}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"4", 
+          StyleBox["n",
+           FontSlant->"Italic"]}], ")"}], "!"}]}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         StyleBox["n",
+          FontSlant->"Italic"], "!"}], ")"}], "4"]]}]}]}]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center,
+  FontWeight->"Bold"],
+ ".",
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.593642529074627*^9, 3.593642608739781*^9}, {
+   3.59375603109375*^9, 3.593756038328125*^9}, {3.593839837125*^9, 
+   3.593840091625*^9}, {3.59384023953125*^9, 3.59384024103125*^9}, 
+   3.5951466148813753`*^9},
+ TextJustification->1.],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RamanujanenSeriea", "[", "k_Integer", "]"}], ":=", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{
+     StyleBox["i",
+      FontSlant->"Italic"], "=", "0"}], "k"], 
+   RowBox[{
+    FractionBox[
+     RowBox[{"2", " ", 
+      SqrtBox["2"]}], "9801"], 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["396", 
+       RowBox[{
+        RowBox[{"-", "4"}], " ", 
+        StyleBox["i",
+         FontSlant->"Italic"]}]], " ", 
+      RowBox[{"(", 
+       RowBox[{"1103", "+", 
+        RowBox[{"26390", " ", 
+         StyleBox["i",
+          FontSlant->"Italic"]}]}], ")"}], " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"4", " ", 
+         StyleBox["i",
+          FontSlant->"Italic"]}], ")"}], "!"}]}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        StyleBox["i",
+         FontSlant->"Italic"], "!"}], ")"}], "4"]]}]}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.593642235157061*^9, 3.5936422728793907`*^9}, {
+  3.5951466233813753`*^9, 3.5951466534438753`*^9}}],
+
+Cell[TextData[{
+ "Ramanujan-en formularen antzeko hainbat formula ezagutzen dira gaur egun. \
+1989 urtean, Chudnovsky anaiek ondoko formula lortu zuten:\n\n\t\t\t\t",
+ Cell[BoxData[
+  RowBox[{
+   FractionBox[
+    RowBox[{"1", " "}], "\[Pi]"], "=", " ", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{
+      StyleBox["n",
+       FontSlant->"Italic"], "=", "0"}], "\[Infinity]"], 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"426880", 
+       SqrtBox["10005"]}]], 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"-", "1"}], ")"}], 
+         StyleBox["n",
+          FontSlant->"Italic"]], 
+        RowBox[{"(", 
+         RowBox[{"13591409", " ", "+", " ", 
+          RowBox[{"545140134", 
+           StyleBox["n",
+            FontSlant->"Italic"]}]}], ")"}], 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"6", 
+           StyleBox["n",
+            FontSlant->"Italic"]}], ")"}], "!"}]}], 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"3", 
+           StyleBox["n",
+            FontSlant->"Italic"]}], ")"}], "!"}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           StyleBox["n",
+            FontSlant->"Italic"], "!"}], ")"}], "3"], 
+        SuperscriptBox["640320", 
+         RowBox[{"3", 
+          StyleBox["n",
+           FontSlant->"Italic"]}]]}]], "."}]}]}]}]],
+  CellChangeTimes->{{3.593517550774845*^9, 3.593517596521759*^9}},
+  TextAlignment->Center,
+  FontWeight->"Bold"],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.5936430106799*^9, 3.593643040551704*^9}, {
+  3.5936431343339767`*^9, 3.593643193778818*^9}, {3.593643601117487*^9, 
+  3.593643628564137*^9}, {3.593643761154375*^9, 3.593643795364122*^9}, {
+  3.593643854032271*^9, 3.593643986649734*^9}, {3.593644170762738*^9, 
+  3.5936441707629023`*^9}, {3.593756051796875*^9, 3.593756053953125*^9}, {
+  3.593840106921875*^9, 3.593840308984375*^9}, {3.59384034984375*^9, 
+  3.593840351875*^9}, {3.5951467210688753`*^9, 3.5951467231157503`*^9}},
+ TextJustification->1.],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ChudnovskySeriea", "[", "k_Integer", "]"}], " ", ":=", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{
+     StyleBox["i",
+      FontSlant->"Italic"], "=", "0"}], "k"], 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"426880", " ", 
+      SqrtBox["10005"]}]], 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], 
+       StyleBox["i",
+        FontSlant->"Italic"]], " ", 
+      RowBox[{"(", 
+       RowBox[{"13591409", " ", "+", " ", 
+        RowBox[{"545140134", " ", 
+         StyleBox["i",
+          FontSlant->"Italic"]}]}], ")"}], " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"6", " ", 
+         StyleBox["i",
+          FontSlant->"Italic"]}], ")"}], "!"}]}], 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"3", 
+         StyleBox["i",
+          FontSlant->"Italic"]}], ")"}], "!"}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         StyleBox["i",
+          FontSlant->"Italic"], "!"}], ")"}], "3"], 
+      SuperscriptBox["640320", 
+       RowBox[{"3", 
+        StyleBox["i",
+         FontSlant->"Italic"]}]]}]]}]}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.593643655322701*^9, 3.5936437299669333`*^9}, {
+   3.593643973457457*^9, 3.593644042779409*^9}, 3.593644163442771*^9, {
+   3.5951467369126253`*^9, 3.5951467636782503`*^9}}],
+
+Cell["\<\
+Konpara ezazu azken serie horren n. batura partzialak ematen duen doitasuna \
+Ramanujan-en seriearenarekin, eta BBP seriearenarekin, n desberdinetarako.\
+\>", "Text",
+ CellChangeTimes->{{3.593642783430394*^9, 3.593642819517001*^9}, {
+  3.593642890420124*^9, 3.5936429242431993`*^9}, {3.593644241517194*^9, 
+  3.593644258620048*^9}, {3.593756060265625*^9, 3.593756077921875*^9}, {
+  3.593840519265625*^9, 3.59384055103125*^9}},
+ TextJustification->1.],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"k", "=", "200"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"N", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"1", "/", 
+      RowBox[{"ChudnovskySeriea", "[", "k", "]"}]}], "-", "Pi"}], ",", 
+    RowBox[{"20", "k"}]}], "]"}], "//", "N"}]}], "Input",
+ CellChangeTimes->{{3.593644066079246*^9, 3.593644119838716*^9}, {
+  3.5936441788980923`*^9, 3.593644184683794*^9}, {3.5936446039571133`*^9, 
+  3.593644646868775*^9}, {3.5951467695532503`*^9, 3.5951467780532503`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  "2.45688255483440425174650809021`15.954589770191005*^-2851"}]], "Output",
+ CellChangeTimes->{{3.593644079299418*^9, 3.5936441202974854`*^9}, {
+   3.593644175053976*^9, 3.5936441855071917`*^9}, {3.593644612044539*^9, 
+   3.593644647525815*^9}, 3.593644702854897*^9, 3.5951561773501253`*^9, 
+   3.625773458923802*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"N", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"1", "/", 
+      RowBox[{"RamanujanenSeriea", "[", "k", "]"}]}], "-", "Pi"}], ",", 
+    RowBox[{"10", "k"}]}], "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.593642303925158*^9, 3.5936423318568373`*^9}, {
+   3.593642824191743*^9, 3.5936428346808653`*^9}, {3.593642942528267*^9, 
+   3.5936429938996563`*^9}, 3.593644601637712*^9, {3.5951467766313753`*^9, 
+   3.5951467796157503`*^9}}],
+
+Cell[BoxData["2.17217365525040675658880056016168`15.954589770191005*^-1605"], \
+"Output",
+ CellChangeTimes->{{3.5936423152296124`*^9, 3.593642333274974*^9}, 
+   3.593642835279253*^9, {3.593642927031104*^9, 3.593642995805431*^9}, 
+   3.593644705129612*^9, 3.5951562097095003`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"N", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"BBPSeriea", "[", "k", "]"}], "-", "Pi"}], ",", 
+    RowBox[{"10", "k"}]}], "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.593642363427174*^9, 3.5936423713546467`*^9}, {
+  3.593642933013685*^9, 3.593642938261598*^9}, {3.5951467810845003`*^9, 
+  3.5951467840688753`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", "5.7749188236350136`*^-248"}]], "Output",
+ CellChangeTimes->{{3.593642367038835*^9, 3.593642371934976*^9}, {
+   3.5936429389272327`*^9, 3.593642950703004*^9}, {3.593642988179166*^9, 
+   3.593642997112001*^9}, 3.5936447067696733`*^9, 3.5951562200845003`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "2011n, Shigeru Kondo japoniarrak, Chudnvsky anaien seriearekin, \[Pi] \
+zenbakiaren zifra hamartar zehatzen kopuruaren  errekorra lortu zuen, ",
+ Cell[BoxData[
+  SuperscriptBox["10", "13"]],
+  CellChangeTimes->{3.593644737309606*^9}],
+ " zifra hamartar kalkulatuz."
+}], "Text",
+ CellChangeTimes->{{3.593644381731062*^9, 3.593644521182007*^9}, {
+   3.59364472780589*^9, 3.593644756690385*^9}, {3.593739504464201*^9, 
+   3.5937395057912703`*^9}, {3.593756089296875*^9, 3.5937561178125*^9}, {
+   3.593840572359375*^9, 3.5938405869375*^9}, 3.593840858609375*^9, {
+   3.593841313703125*^9, 3.59384136890625*^9}},
+ TextJustification->1.],
+
+Cell[TextData[StyleBox["12) 1/\[Pi] zenbakiaren zenbat zifra hamartar zehatz \
+lortuko genituzke Chudnvsky anaien seriearen 10000. batura partzialarekin?",
+ FontWeight->"Bold",
+ FontSlant->"Italic",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellChangeTimes->{{3.5936387900383377`*^9, 3.5936388366539497`*^9}, {
+   3.593645226440888*^9, 3.5936452538027143`*^9}, {3.593645289747568*^9, 
+   3.593645372187975*^9}, {3.593645425102075*^9, 3.593645426310121*^9}, {
+   3.593739469957673*^9, 3.593739470301722*^9}, {3.593756123921875*^9, 
+   3.593756124140625*^9}, {3.593840647828125*^9, 3.593840714359375*^9}, 
+   3.5951444909751253`*^9},
+ TextJustification->1.],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"k", "=", "10000"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"N", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"1", "/", 
+      RowBox[{"ChudnovskySeriea", "[", "k", "]"}]}], "-", "Pi"}], ",", 
+    RowBox[{"20", "k"}]}], "]"}], "//", "N"}]}], "Input",
+ CellChangeTimes->{{3.625771176233802*^9, 3.625771179247802*^9}, {
+  3.625773208493802*^9, 3.625773213045802*^9}, {3.625773471215802*^9, 
+  3.625773472715802*^9}},
+ Background->RGBColor[1, 0.5, 0]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "2.496502095"}], "\[Times]", 
+  SuperscriptBox["10", 
+   RowBox[{"-", "141832"}]]}]], "Output",
+ CellChangeTimes->{{3.625774195061802*^9, 3.6257742369188023`*^9}},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"ZifraZehatzKopurua", " ", "=", " ", "141832"}]], "Input",
+ CellChangeTimes->{{3.59364540052623*^9, 3.5936454323595943`*^9}, 
+   3.5938398199375*^9, {3.61950495189625*^9, 3.61950495189625*^9}, {
+   3.625774258164802*^9, 3.6257742618598022`*^9}},
+ Background->RGBColor[1, 0.5, 0]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Inplementazioa", "Subsection",
+ InitializationCell->True,
+ CellChangeTimes->{{3.593515537593864*^9, 3.593515539959333*^9}, {
+  3.593515590168457*^9, 3.593515593197433*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Arkimedes-en metodoa", "Subsubsection",
+ CellChangeTimes->{{3.593518507703822*^9, 3.593518515149976*^9}, {
+  3.593763640671875*^9, 3.593763646625*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "ArkimedesenZirkuloa", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ArkimedesenZirkuloa", "[", "m_Integer", "]"}], ":=", 
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"Graphics", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Brown", ",", "Thin", ",", 
+         RowBox[{"Circle", "[", "]"}], ",", "Thin", ",", 
+         RowBox[{"Dashing", "[", "1", "]"}], ",", "Blue", ",", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"GeometricTransformation", "[", 
+            RowBox[{
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"1", ",", "0"}], "}"}]}], "}"}], "]"}], ",", 
+             RowBox[{"RotationMatrix", "[", "a", "]"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"a", ",", 
+             RowBox[{"2", 
+              RowBox[{"Pi", "/", "n"}], "*", 
+              RowBox[{"Range", "[", "n", "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"Dashing", "[", ".01", "]"}], ",", "Blue", ",", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"GeometricTransformation", "[", 
+            RowBox[{
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"1", ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   FractionBox[
+                    RowBox[{"2", "\[Pi]"}], "n"], "]"}], ",", 
+                  RowBox[{"Sin", "[", 
+                   FractionBox[
+                    RowBox[{"2", "\[Pi]"}], "n"], "]"}]}], "}"}]}], "}"}], 
+              "]"}], ",", 
+             RowBox[{"RotationMatrix", "[", "a", "]"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"a", ",", 
+             RowBox[{"2", 
+              RowBox[{"Pi", "/", "n"}], "*", 
+              RowBox[{"Range", "[", "n", "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"Dashing", "[", "1", "]"}], ",", "Red", ",", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"GeometricTransformation", "[", 
+            RowBox[{
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"1", ",", 
+                  RowBox[{"Tan", "[", 
+                   FractionBox["\[Pi]", "n"], "]"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"1", ",", 
+                  RowBox[{"Tan", "[", 
+                   FractionBox[
+                    RowBox[{"-", "\[Pi]"}], "n"], "]"}]}], "}"}]}], "}"}], 
+              "]"}], ",", 
+             RowBox[{"RotationMatrix", "[", "a", "]"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"a", ",", 
+             RowBox[{"2", 
+              RowBox[{"Pi", "/", "n"}], "*", 
+              RowBox[{"Range", "[", "n", "]"}]}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"Dashing", "[", ".01", "]"}], ",", "Red", ",", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"GeometricTransformation", "[", 
+            RowBox[{
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox[
+                   RowBox[{"Cos", "[", 
+                    FractionBox["\[Pi]", "n"], "]"}], 
+                   RowBox[{"Cos", "[", 
+                    FractionBox["\[Pi]", "n"], "]"}]], ",", 
+                  FractionBox[
+                   RowBox[{"Sin", "[", 
+                    FractionBox["\[Pi]", "n"], "]"}], 
+                   RowBox[{"Cos", "[", 
+                    FractionBox["\[Pi]", "n"], "]"}]]}], "}"}]}], "}"}], 
+              "]"}], ",", 
+             RowBox[{"RotationMatrix", "[", "a", "]"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"a", ",", 
+             RowBox[{"2", 
+              RowBox[{"Pi", "/", "n"}], "*", 
+              RowBox[{"Range", "[", "n", "]"}]}]}], "}"}]}], "]"}]}], "}"}], 
+       ",", 
+       RowBox[{"PlotRange", "\[Rule]", "1.3"}], ",", 
+       RowBox[{"Epilog", "\[Rule]", 
+        RowBox[{"Inset", "[", 
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"n", "*", 
+             FractionBox["1.", "2"], "*", 
+             RowBox[{"Sqrt", "[", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Tan", "[", 
+                  FractionBox["\[Pi]", 
+                   RowBox[{"N", "[", "n", "]"}]], "]"}], "-", 
+                 RowBox[{"Tan", "[", 
+                  FractionBox[
+                   RowBox[{"-", "\[Pi]"}], 
+                   RowBox[{"N", "[", "n", "]"}]], "]"}]}], ")"}], "2"], 
+              "]"}]}], ",", "20", ",", "Red"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "1.2"}], "}"}]}], "]"}]}], ",", 
+       RowBox[{"Prolog", "\[Rule]", 
+        RowBox[{"Inset", "[", 
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"n", "*", 
+             RowBox[{"Cos", "[", 
+              FractionBox["\[Pi]", 
+               RowBox[{"N", "[", "n", "]"}]], "]"}], "*", 
+             RowBox[{"Sin", "[", 
+              FractionBox["\[Pi]", 
+               RowBox[{"N", "[", "n", "]"}]], "]"}]}], ",", "20", ",", 
+            "Blue"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", 
+            RowBox[{"-", "1.2"}]}], "}"}]}], "]"}]}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"n", ",", "6", ",", "\"\<Alde kopurua\>\""}], "}"}], ",", "3",
+        ",", "m", ",", "1", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+    "]"}]}], ";"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, 3.4450014556384*^9, {3.445029708109375*^9, 
+   3.445029712171875*^9}, {3.4450968757221584`*^9, 3.4450968872534084`*^9}, {
+   3.445695743826934*^9, 3.445695792362586*^9}, {3.445695845083171*^9, 
+   3.445695884956258*^9}, 3.4456959159507027`*^9, {3.4456959784832363`*^9, 
+   3.445696019260667*^9}, {3.560709030366383*^9, 3.560709047665698*^9}, {
+   3.59351525753424*^9, 3.593515300411384*^9}, {3.593515366416705*^9, 
+   3.593515402001999*^9}, {3.593515459757392*^9, 3.593515460290954*^9}, {
+   3.593515555748969*^9, 3.593515584652575*^9}, {3.593515651126749*^9, 
+   3.593515724514632*^9}, {3.5935181155449457`*^9, 3.593518119677763*^9}, {
+   3.59357343285498*^9, 3.593573436053093*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Gregory-ren seriea", "Subsubsection",
+ CellChangeTimes->{{3.593736946346737*^9, 3.5937369680643463`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"F", "[", "x_", "]"}], ":=", " ", 
+   RowBox[{"ArcTan", "[", "x", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ff", "=", 
+   RowBox[{"{", "F", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ftag", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"TraditionalForm", "[", 
+      RowBox[{
+       RowBox[{"ff", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], "[", "x", "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", 
+       RowBox[{"Length", "[", "ff", "]"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ftagbuttons", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "\[Rule]", 
+       RowBox[{"#", "[", 
+        RowBox[{"[", "2", "]"}], "]"}]}], "&"}], ",", 
+     RowBox[{"Transpose", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Range", "[", 
+         RowBox[{"Length", "[", "ff", "]"}], "]"}], ",", "ftag"}], "}"}], 
+      "]"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fac", "[", "n_", "]"}], ":=", 
+   RowBox[{"HoldForm", "[", 
+    RowBox[{"n", "!"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"p", "[", 
+    RowBox[{"f_", ",", 
+     RowBox[{"{", 
+      RowBox[{"x_", ",", "n_", ",", "a_"}], "}"}]}], "]"}], ":=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Derivative", "[", "k", "]"}], "[", "f", "]"}], "[", "a", 
+       "]"}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "-", "a"}], ")"}], "^", "k"}], "/", 
+       RowBox[{"k", "!"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "0", ",", "n"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"p2", "[", 
+    RowBox[{"f_", ",", 
+     RowBox[{"{", 
+      RowBox[{"x_", ",", "n_", ",", "a_"}], "}"}]}], "]"}], ":=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Derivative", "[", "k", "]"}], "[", "f", "]"}], "[", "a", 
+       "]"}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "-", "a"}], ")"}], "^", "k"}], "/", 
+       RowBox[{"fac", "[", "k", "]"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "0", ",", "n"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fgraph", "[", 
+    RowBox[{
+     RowBox[{"{", "f_", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"c_", ",", "b_", ",", "n_", ",", "a_"}], "}"}]}], "]"}], ":=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f", "[", "t", "]"}], ",", 
+       RowBox[{"p", "[", 
+        RowBox[{"f", ",", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "n", ",", "a"}], "}"}]}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "c", ",", "b"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Ticks", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", "Full"}], ",", 
+     RowBox[{"PlotLabel", "\[Rule]", 
+      RowBox[{"SequenceForm", "[", 
+       RowBox[{
+       "\"\<arctan(x) eta \>\"", ",", "n", ",", 
+        "\"\<. batura partzialak\>\""}], "]"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Thickness", "[", "0.003", "]"}], ",", 
+          RowBox[{"ColorData", "[", 
+           RowBox[{"\"\<HTML\>\"", ",", "\"\<SlateBlue\>\""}], "]"}]}], "}"}],
+         ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Thickness", "[", "0.003", "]"}], ",", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{"1", ",", ".47", ",", "0"}], "]"}]}], "}"}]}], "}"}]}], 
+     ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"500", ",", "100"}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"egraph", "[", 
+    RowBox[{
+     RowBox[{"{", "f_", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"c_", ",", "b_", ",", "n_", ",", "a_"}], "}"}]}], "]"}], ":=", 
+   RowBox[{"LogPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Abs", "[", 
+       RowBox[{
+        RowBox[{"f", "[", "t", "]"}], "-", 
+        RowBox[{"p", "[", 
+         RowBox[{"f", ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", "n", ",", "a"}], "}"}]}], "]"}]}], "]"}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "c", ",", "b"}], "}"}], ",", 
+     RowBox[{"PlotLabel", "\[Rule]", " ", 
+      RowBox[{"SequenceForm", "[", 
+       RowBox[{"n", ",", "\"\<. hondarra\>\""}], "]"}]}], ",", 
+     RowBox[{"Ticks", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", "Full"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Thickness", "[", "0.005", "]"}], ",", "Purple"}], "}"}], 
+       "}"}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"500", ",", "150"}], "}"}]}]}], "]"}]}], ";"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.47292815115625*^9, 3.472928759953125*^9}, {
+   3.472929387390625*^9, 3.47292940609375*^9}, {3.47292995190625*^9, 
+   3.4729299536875*^9}, {3.472930058640625*^9, 3.472930064203125*^9}, {
+   3.472930108953125*^9, 3.47293016359375*^9}, 3.472930218578125*^9, {
+   3.593734001420636*^9, 3.59373404202971*^9}, {3.593734088897192*^9, 
+   3.593734108340747*^9}, {3.593734372048334*^9, 3.593734373402472*^9}, {
+   3.5937345149101152`*^9, 3.593734542671175*^9}, {3.593734617949012*^9, 
+   3.593734624037263*^9}, {3.593734714503277*^9, 3.5937349314395847`*^9}, {
+   3.59373496798103*^9, 3.5937349684589233`*^9}, {3.59373501573496*^9, 
+   3.593735016276767*^9}, {3.59373506052757*^9, 3.5937350681154737`*^9}, 
+   3.593735108713439*^9, {3.593735248939117*^9, 3.593735306471599*^9}, {
+   3.593735377045848*^9, 3.593735381115961*^9}, {3.5937354224432783`*^9, 
+   3.593735465749475*^9}, {3.593735509571258*^9, 3.593735549306245*^9}, {
+   3.593735691282999*^9, 3.593735691825067*^9}, {3.593735760137899*^9, 
+   3.5937357985473833`*^9}, {3.593736164986413*^9, 3.5937362020902357`*^9}, {
+   3.593736238237636*^9, 3.593736241412698*^9}, {3.5937362767346783`*^9, 
+   3.593736297149558*^9}, {3.593736390484034*^9, 3.593736417208062*^9}, {
+   3.593736695524089*^9, 3.593736761566084*^9}, {3.5937368027932377`*^9, 
+   3.593736809119211*^9}, {3.593736859970325*^9, 3.5937368695863047`*^9}, 
+   3.593736901245121*^9, {3.593737023929432*^9, 3.593737025398642*^9}, {
+   3.59373706340415*^9, 3.593737122499132*^9}, {3.593737265684011*^9, 
+   3.593737296101392*^9}, {3.593737329688299*^9, 3.5937373678218412`*^9}, {
+   3.593737432329434*^9, 3.59373744010495*^9}, {3.593737524477922*^9, 
+   3.5937375288532248`*^9}, {3.5937375614820433`*^9, 3.5937375842165213`*^9}, 
+   3.593832355248137*^9},
+ CellID->358188161],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "GregoryIrudia", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"GregoryIrudia", ":=", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Column", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"fgraph", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"ff", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", "1", ",", "n", ",", "0"}], "}"}]}], 
+         "]"}], ",", "\"\< \>\"", ",", "\"\< \>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"egraph", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"ff", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", "1", ",", "n", ",", "0"}], "}"}]}], 
+         "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+      RowBox[{"Alignment", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"Left", ",", "Top"}], "}"}]}]}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "\"\<Batugai kopurua\>\""}], "}"}], ",", 
+      "1", ",", "40", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"s", ",", "1", ",", "\"\<funci\[OAcute]n\>\""}], "}"}], ",", 
+        "ftagbuttons", ",", 
+        RowBox[{"ControlType", "\[Rule]", "Setter"}]}], "}"}], ","}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "]"}]}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.47292815115625*^9, 3.472928759953125*^9}, {
+   3.472929387390625*^9, 3.47292940609375*^9}, {3.47292995190625*^9, 
+   3.4729299536875*^9}, {3.472930058640625*^9, 3.472930064203125*^9}, {
+   3.472930108953125*^9, 3.47293016359375*^9}, 3.472930218578125*^9, {
+   3.593734001420636*^9, 3.59373404202971*^9}, {3.593734088897192*^9, 
+   3.593734108340747*^9}, {3.593734372048334*^9, 3.593734373402472*^9}, {
+   3.5937345149101152`*^9, 3.593734542671175*^9}, {3.593734617949012*^9, 
+   3.593734624037263*^9}, {3.593734714503277*^9, 3.5937349314395847`*^9}, {
+   3.59373496798103*^9, 3.5937349684589233`*^9}, {3.59373501573496*^9, 
+   3.593735016276767*^9}, {3.59373506052757*^9, 3.5937350681154737`*^9}, 
+   3.593735108713439*^9, {3.593735248939117*^9, 3.593735306471599*^9}, {
+   3.593735377045848*^9, 3.593735381115961*^9}, {3.5937354224432783`*^9, 
+   3.593735465749475*^9}, {3.593735509571258*^9, 3.593735549306245*^9}, {
+   3.593735691282999*^9, 3.593735691825067*^9}, {3.593735760137899*^9, 
+   3.5937357985473833`*^9}, {3.593736164986413*^9, 3.5937362020902357`*^9}, {
+   3.593736238237636*^9, 3.593736241412698*^9}, {3.5937362767346783`*^9, 
+   3.593736297149558*^9}, {3.593736390484034*^9, 3.593736417208062*^9}, {
+   3.593736695524089*^9, 3.593736761566084*^9}, {3.5937368027932377`*^9, 
+   3.593736809119211*^9}, {3.593736859970325*^9, 3.5937368695863047`*^9}, 
+   3.593736901245121*^9, {3.593737023929432*^9, 3.593737025398642*^9}, {
+   3.59373706340415*^9, 3.593737122499132*^9}, {3.593737265684011*^9, 
+   3.593737296101392*^9}, {3.593737329688299*^9, 3.5937373678218412`*^9}, {
+   3.593737432329434*^9, 3.59373744010495*^9}, {3.593737524477922*^9, 
+   3.5937375288532248`*^9}, {3.5937375614820433`*^9, 3.5937375842165213`*^9}, 
+   3.593832355248137*^9}]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1264, 679},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 610, 10, 117, "Section"],
+Cell[CellGroupData[{
+Cell[1214, 36, 122, 1, 65, "Subsection"],
+Cell[1339, 39, 964, 15, 45, "Text"],
+Cell[2306, 56, 566, 10, 74, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2909, 71, 292, 5, 65, "Subsection"],
+Cell[CellGroupData[{
+Cell[3226, 80, 175, 2, 51, "Subsubsection"],
+Cell[3404, 84, 271, 4, 45, "Text"],
+Cell[CellGroupData[{
+Cell[3700, 92, 338, 5, 45, "Input"],
+Cell[4041, 99, 3722, 83, 699, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7812, 188, 111, 1, 51, "Subsubsection"],
+Cell[7926, 191, 1861, 49, 145, "Text"],
+Cell[9790, 242, 876, 22, 45, "Input",
+ InitializationCell->True],
+Cell[10669, 266, 292, 6, 45, "Text"],
+Cell[10964, 274, 383, 7, 45, "Text"],
+Cell[CellGroupData[{
+Cell[11372, 285, 310, 5, 45, "Input"],
+Cell[11685, 292, 111, 1, 44, "Output"]
+}, Open  ]],
+Cell[11811, 296, 712, 11, 74, "Text"],
+Cell[CellGroupData[{
+Cell[12548, 311, 451, 10, 69, "Input"],
+Cell[13002, 323, 126, 2, 68, "Output"]
+}, Open  ]],
+Cell[13143, 328, 290, 8, 69, "Text"],
+Cell[13436, 338, 320, 6, 74, "Text"],
+Cell[CellGroupData[{
+Cell[13781, 348, 455, 10, 69, "Input"],
+Cell[14239, 360, 125, 2, 68, "Output"]
+}, Open  ]],
+Cell[14379, 365, 704, 20, 46, "Text"],
+Cell[CellGroupData[{
+Cell[15108, 389, 521, 15, 69, "Input"],
+Cell[15632, 406, 287, 7, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15956, 418, 587, 9, 69, "Input"],
+Cell[16546, 429, 132, 2, 68, "Output"]
+}, Open  ]],
+Cell[16693, 434, 370, 7, 74, "Text"],
+Cell[CellGroupData[{
+Cell[17088, 445, 242, 5, 69, "Input"],
+Cell[17333, 452, 144, 2, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17514, 459, 381, 9, 69, "Input"],
+Cell[17898, 470, 127, 2, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18062, 477, 608, 14, 75, "Input"],
+Cell[18673, 493, 3323, 63, 389, "Output"]
+}, Open  ]],
+Cell[22011, 559, 1204, 37, 75, "Text"],
+Cell[CellGroupData[{
+Cell[23240, 600, 576, 18, 69, "Input"],
+Cell[23819, 620, 186, 5, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24042, 630, 153, 3, 69, "Input"],
+Cell[24198, 635, 108, 2, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24343, 642, 192, 4, 69, "Input"],
+Cell[24538, 648, 144, 2, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24719, 655, 218, 5, 69, "Input"],
+Cell[24940, 662, 122, 2, 68, "Output"]
+}, Open  ]],
+Cell[25077, 667, 325, 5, 69, "Input"],
+Cell[25405, 674, 299, 5, 69, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25741, 684, 107, 1, 51, "Subsubsection"],
+Cell[25851, 687, 1546, 43, 118, "Text"],
+Cell[27400, 732, 1027, 24, 85, "Input",
+ InitializationCell->True],
+Cell[28430, 758, 560, 10, 45, "Text"],
+Cell[CellGroupData[{
+Cell[29015, 772, 582, 19, 84, "Input"],
+Cell[29600, 793, 196, 5, 68, "Output"]
+}, Open  ]],
+Cell[29811, 801, 313, 5, 69, "Input"],
+Cell[30127, 808, 1159, 36, 75, "Text"],
+Cell[CellGroupData[{
+Cell[31311, 848, 599, 19, 69, "Input"],
+Cell[31913, 869, 196, 5, 68, "Output"]
+}, Open  ]],
+Cell[32124, 877, 158, 3, 69, "Input"],
+Cell[CellGroupData[{
+Cell[32307, 884, 325, 6, 69, "Input"],
+Cell[32635, 892, 745, 13, 279, "Output"]
+}, Open  ]],
+Cell[33395, 908, 321, 6, 69, "Input"],
+Cell[CellGroupData[{
+Cell[33741, 918, 823, 14, 346, "Input"],
+Cell[34567, 934, 744, 13, 279, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35348, 952, 680, 18, 373, "Input"],
+Cell[36031, 972, 314, 9, 140, "Output"],
+Cell[36348, 983, 145, 3, 70, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36542, 992, 160, 2, 51, "Subsubsection"],
+Cell[36705, 996, 3348, 96, 370, "Text"],
+Cell[40056, 1094, 661, 20, 85, "Input",
+ InitializationCell->True],
+Cell[40720, 1116, 245, 5, 45, "Text"],
+Cell[CellGroupData[{
+Cell[40990, 1125, 100, 2, 69, "Input",
+ InitializationCell->True],
+Cell[41093, 1129, 4626, 102, 617, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45768, 1237, 156, 2, 51, "Subsubsection"],
+Cell[45927, 1241, 1043, 24, 226, "Text"],
+Cell[46973, 1267, 983, 25, 94, "Text"],
+Cell[47959, 1294, 720, 17, 75, "Input",
+ InitializationCell->True],
+Cell[48682, 1313, 1056, 28, 74, "Text"],
+Cell[49741, 1343, 1577, 47, 135, "Input"],
+Cell[51321, 1392, 618, 11, 102, "Text"],
+Cell[CellGroupData[{
+Cell[51964, 1407, 1051, 35, 100, "Input"],
+Cell[53018, 1444, 196, 5, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53251, 1454, 1119, 36, 100, "Input"],
+Cell[54373, 1492, 220, 5, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54630, 1502, 1119, 36, 100, "Input"],
+Cell[55752, 1540, 324, 8, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56113, 1553, 1190, 38, 131, "Input"],
+Cell[57306, 1593, 198, 5, 68, "Output"]
+}, Open  ]],
+Cell[57519, 1601, 220, 5, 69, "Text"],
+Cell[57742, 1608, 385, 6, 69, "Input"],
+Cell[58130, 1616, 381, 6, 69, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58548, 1627, 227, 3, 51, "Subsubsection"],
+Cell[58778, 1632, 1570, 40, 113, "Text"],
+Cell[60351, 1674, 640, 12, 131, "Text"],
+Cell[60994, 1688, 1318, 40, 85, "Input",
+ InitializationCell->True],
+Cell[62315, 1730, 98, 1, 45, "Text"],
+Cell[CellGroupData[{
+Cell[62438, 1735, 265, 6, 45, "Input"],
+Cell[62706, 1743, 371, 5, 101, "Output"]
+}, Open  ]],
+Cell[63092, 1751, 2784, 71, 142, "Text"],
+Cell[65879, 1824, 1252, 29, 45, "Text"],
+Cell[CellGroupData[{
+Cell[67156, 1857, 573, 20, 96, "Input"],
+Cell[67732, 1879, 153, 3, 70, "Output"]
+}, Open  ]],
+Cell[67900, 1885, 389, 7, 69, "Input"],
+Cell[68292, 1894, 456, 8, 45, "Text"],
+Cell[CellGroupData[{
+Cell[68773, 1906, 639, 21, 96, "Input"],
+Cell[69415, 1929, 184, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[69636, 1938, 573, 20, 96, "Input"],
+Cell[70212, 1960, 184, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[70433, 1969, 639, 21, 96, "Input"],
+Cell[71075, 1992, 184, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71296, 2001, 639, 21, 96, "Input"],
+Cell[71938, 2024, 188, 4, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72163, 2033, 639, 21, 96, "Input"],
+Cell[72805, 2056, 189, 4, 70, "Output"]
+}, Open  ]],
+Cell[73009, 2063, 337, 6, 69, "Input"],
+Cell[73349, 2071, 419, 8, 74, "Text"],
+Cell[73771, 2081, 162, 3, 69, "Text"],
+Cell[CellGroupData[{
+Cell[73958, 2088, 355, 12, 69, "Input"],
+Cell[74316, 2102, 240, 7, 74, "Output"]
+}, Open  ]],
+Cell[74571, 2112, 133, 2, 69, "Text"],
+Cell[CellGroupData[{
+Cell[74729, 2118, 543, 19, 84, "Input"],
+Cell[75275, 2139, 197, 5, 68, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75521, 2150, 110, 1, 51, "Subsubsection"],
+Cell[75634, 2153, 1401, 47, 150, "Text"],
+Cell[77038, 2202, 1050, 36, 89, "Input",
+ InitializationCell->True],
+Cell[78091, 2240, 2077, 61, 175, "Text"],
+Cell[80171, 2303, 1408, 47, 85, "Input",
+ InitializationCell->True],
+Cell[81582, 2352, 460, 8, 74, "Text"],
+Cell[CellGroupData[{
+Cell[82067, 2364, 512, 12, 75, "Input"],
+Cell[82582, 2378, 346, 6, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[82965, 2389, 471, 11, 45, "Input"],
+Cell[83439, 2402, 279, 4, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[83755, 2411, 358, 9, 45, "Input"],
+Cell[84116, 2422, 285, 4, 46, "Output"]
+}, Open  ]],
+Cell[84416, 2429, 649, 13, 75, "Text"],
+Cell[85068, 2444, 655, 11, 74, "Text"],
+Cell[CellGroupData[{
+Cell[85748, 2459, 494, 13, 99, "Input"],
+Cell[86245, 2474, 236, 6, 70, "Output"]
+}, Open  ]],
+Cell[86496, 2483, 302, 5, 69, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[86847, 2494, 178, 3, 65, "Subsection",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[87050, 2501, 157, 2, 6702, "Subsubsection"],
+Cell[87210, 2505, 6796, 167, 81972, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[94043, 2677, 111, 1, 6702, "Subsubsection"],
+Cell[94157, 2680, 7194, 193, 51058, "Input",
+ InitializationCell->True,
+ CellID->358188161],
+Cell[101354, 2875, 3644, 77, 31618, "Input",
+ InitializationCell->True]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
